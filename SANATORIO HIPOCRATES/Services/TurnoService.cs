@@ -36,7 +36,6 @@ namespace SANATORIO_HIPOCRATES.Services
                 }
                 else
                 {
-                    //MessageBox.Show("No existe un paciente registrado con el nro carnet: " + idPaciente);
                     throw new ElementoNoEncontrado("No hay turnos creados para el paciente");
                 }
             }

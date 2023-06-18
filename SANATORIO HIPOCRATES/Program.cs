@@ -19,9 +19,9 @@ namespace SANATORIO_HIPOCRATES
 
 
             Recepcionista recepcionistaLaburando = new Recepcionista();
-            recepcionistaLaburando.CrearTurno("545045095", "Fernando", "Perez", 'M', "1234567890",
-                            "juan.perez@example.com", "Calle Falsa 123",
-                            new DateTime(1980, 03, 10), "Argentina", "Galeno", 5450400);
+            recepcionistaLaburando.CrearTurno("39641779", "Tommy", "ApelldiORandom", 'M', "1234567890",
+                            "tommi@example.com", "Calle Falsa 123",
+                            new DateTime(1996, 03, 10), "Argentina", "Galeno", 170400);
 
 
             TurnoService turnoService = new TurnoService();
@@ -30,102 +30,6 @@ namespace SANATORIO_HIPOCRATES
             {
                 MessageBox.Show($" Turnos en cola: {turno.ToString()}.");
             }
-
-
-            /*
-            var optionsBuilder = new DbContextOptionsBuilder<Conexion>();
-            optionsBuilder.UseMySql("Server=localhost;Database=sanatorio;Uid=root;Pwd=123456;",
-                new MySqlServerVersion(new Version(8, 0, 21)) // or whatever version you have
-            );
-
-
-            using (var context = new Conexion(optionsBuilder.Options))
-            {
-
-
-                
-                var nuevaPersona = new Persona
-                {
-                    Dni = "12345678",
-                    Nombre = "Juan",
-                    Apellido = "Perez",
-                    Sexo = 'M',
-                    Telefono = "1234567890",
-                    Email = "juan.perez@example.com",
-                    Domicilio = "Calle Falsa 123",
-                    FechaNacimiento = new DateTime(1980, 1, 1),
-                    Nacionalidad = "Argentina"
-                };
-
-                context.Personas.Add(nuevaPersona);
-                context.SaveChanges();
-
-
-                var nuevoPaciente = new Paciente
-                {
-                    IdPersona = nuevaPersona.IdPersona,
-                    Persona = nuevaPersona,
-                    ObraSocial = "Swiss",
-                    NumeroCarnet = 4500
-                };
-
-                context.Pacientes.Add(nuevoPaciente);
-                context.SaveChanges();
-
-
-
-                /////////////////////
-                ///
-                var nuevoPersonal = new Persona
-                {
-                    Dni = "12345678",
-                    Nombre = "Esteban",
-                    Apellido = "Perez",
-                    Sexo = 'M',
-                    Telefono = "1234567890",
-                    Email = "juan.perez@example.com",
-                    Domicilio = "Calle Falsa 123",
-                    FechaNacimiento = new DateTime(1980, 1, 1),
-                    Nacionalidad = "Argentina"
-                };
-
-                context.Personas.Add(nuevoPersonal);
-                context.SaveChanges();
-
-
-                var nuevoEmpleado = new Empleado
-                {
-                    Username = "rapa",
-                    Password = "sese",
-                    FechaAlta = DateTime.Now,
-                    Salario = 10000,
-                    IdPersona = nuevoPersonal.IdPersona,
-                    Persona = nuevoPersonal
-                };
-
-                context.Empleados.Add(nuevoEmpleado);
-                context.SaveChanges();
-
-                var nuevoRecepcionista = new Recepcionista
-                {
-                    IdEmpleado = nuevoEmpleado.IdEmpleado,
-                    Empleado = nuevoEmpleado
-                };
-
-                context.Recepcionistas.Add(nuevoRecepcionista);
-                context.SaveChanges();
-
-                var nuevoMedico = new Medico
-                {
-                    IdEmpleado = nuevoEmpleado.IdEmpleado,
-                    Especialidad = "Odontologia",
-                    Empleado = nuevoEmpleado
-                };
-
-                context.Medicos.Add(nuevoMedico);
-                context.SaveChanges();
-
-                */
 
         }
 

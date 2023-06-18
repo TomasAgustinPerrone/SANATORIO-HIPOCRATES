@@ -39,7 +39,6 @@ namespace SANATORIO_HIPOCRATES.Services
                 }
                 else
                 {
-                    //MessageBox.Show("No existe una persona registrada con el dni: " + dni);
                     throw new ElementoNoEncontrado("No existe una persona registrada con el dni: " + dni);
                 }
             }
