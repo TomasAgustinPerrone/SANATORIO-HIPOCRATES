@@ -24,13 +24,21 @@ namespace SANATORIO_HIPOCRATES
 
             Persona persona = new Persona();
             persona.Apellido = "algasdasdasdasdo";
-            //MessageBox.Show(persona.Apellido);
+            MessageBox.Show(persona.Apellido);
+            MessageBox.Show(persona.ToString() );
 
             Paciente paciente = new Paciente();
             paciente.Dni = "341341341";
-            //MessageBox.Show(paciente.Dni);
+            MessageBox.Show(paciente.Dni);
+            MessageBox.Show(paciente.ToString());
 
-            MessageBox.Show(paciente.ToString() );
+            Empleado empleado = new Empleado();
+            empleado.Username = "papito1";
+            MessageBox.Show(empleado.ToString() );
+
+            Medico medico = new Medico();
+            medico.Especialidad = "oftalmologia";
+            MessageBox.Show(medico.ToString());
 
 
         }
