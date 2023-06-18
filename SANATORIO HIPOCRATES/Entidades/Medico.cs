@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SANATORIO_HIPOCRATES.Entidades
 {
-    internal class Medico : Empleado
+    public class Medico : Empleado
     {
+
         private long idMedico;
         private string especialidad;
 
@@ -33,7 +35,10 @@ namespace SANATORIO_HIPOCRATES.Entidades
             this.especialidad = especialidad;
         }
 
+
         public long IdMedico { get => idMedico; set => idMedico = value; }
+
+
         public string Especialidad { get => especialidad; set => especialidad = value; }
 
 

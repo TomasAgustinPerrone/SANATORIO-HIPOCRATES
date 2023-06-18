@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace SANATORIO_HIPOCRATES.Entidades
 {
-    class Empleado : Persona
+    public class Empleado : Persona
     {
+
         private long idEmpleado;
         private string username;
         private string password;
@@ -35,7 +37,10 @@ namespace SANATORIO_HIPOCRATES.Entidades
             this.salario = salario;
         }
 
+
         public long IdEmpleado { get => idEmpleado; set => idEmpleado = value; }
+
+
         public string Username { get => username; set => username = value; }
         public string Password { get => password; set => password = value; }
         public DateTime FechaAlta { get => fechaAlta; set => fechaAlta = value; }

@@ -1,9 +1,8 @@
+using Microsoft.EntityFrameworkCore;
+using SANATORIO_HIPOCRATES.Config;
 using SANATORIO_HIPOCRATES.Entidades;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+
 
 namespace SANATORIO_HIPOCRATES
 {
@@ -15,30 +14,38 @@ namespace SANATORIO_HIPOCRATES
         [STAThread]
         static void Main()
         {
+            var optionsBuilder = new DbContextOptionsBuilder<Conexion>();
+            optionsBuilder.UseMySql("Server=localhost;Database=sanatorio;Uid=root;Pwd=123456;",
+                new MySqlServerVersion(new Version(8, 0, 21)) // or whatever version you have
+            );
+
+
+            using (var context = new Conexion(optionsBuilder.Options))
+            {
+                var nuevaPersona = new Persona
+                {
+                    IdPersona = 1, // Este valor debe ser único
+                    Dni = "12345678",
+                    Nombre = "Juan",
+                    Apellido = "Perez",
+                    Sexo = "M",
+                    Telefono = "1234567890",
+                    Email = "juan.perez@example.com",
+                    Domicilio = "Calle Falsa 123",
+                    FechaNacimiento = new DateTime(1980, 1, 1),
+                    Nacionalidad = "Argentina"
+                };
+
+                context.Personas.Add(nuevaPersona);
+                context.SaveChanges();
+            }
+
             /*
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
             */
-
-            Persona persona = new Persona();
-            persona.Apellido = "algasdasdasdasdo";
-            MessageBox.Show(persona.Apellido);
-            MessageBox.Show(persona.ToString() );
-
-            Paciente paciente = new Paciente();
-            paciente.Dni = "341341341";
-            MessageBox.Show(paciente.Dni);
-            MessageBox.Show(paciente.ToString());
-
-            Empleado empleado = new Empleado();
-            empleado.Username = "papito1";
-            MessageBox.Show(empleado.ToString() );
-
-            Medico medico = new Medico();
-            medico.Especialidad = "oftalmologia";
-            MessageBox.Show(medico.ToString());
 
 
         }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Net;
 using System.Text;
@@ -8,8 +9,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SANATORIO_HIPOCRATES.Entidades
 {
-    class Persona
+    public class Persona
     {
+
         private long idPersona;
         private string dni;
         private string nombre;
@@ -53,8 +55,10 @@ namespace SANATORIO_HIPOCRATES.Entidades
             return $"ID: {IdPersona}, DNI: {Dni}, Nombre: {Nombre}, Apellido: {Apellido}, Sexo: {Sexo}, Telefono: {Telefono}, Email: {Email}, Domicilio: {Domicilio}, Fecha de Nacimiento: {FechaNacimiento}, Nacionalidad: {Nacionalidad}";
         }
 
-
+        [Key]
         public long IdPersona { get => idPersona; set => idPersona = value; }
+
+
         public string Dni { get => dni; set => dni = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
