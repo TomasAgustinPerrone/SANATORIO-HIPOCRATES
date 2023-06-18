@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SANATORIO_HIPOCRATES.Migrations
 {
-    public partial class Todalabase3 : Migration
+    public partial class Todalabase4 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -38,20 +38,6 @@ namespace SANATORIO_HIPOCRATES.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Personas", x => x.IdPersona);
-                })
-                .Annotation("MySql:CharSet", "utf8mb4");
-
-            migrationBuilder.CreateTable(
-                name: "Turnos",
-                columns: table => new
-                {
-                    IdTurno = table.Column<long>(type: "bigint", nullable: false)
-                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Turnos", x => x.IdTurno);
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
@@ -146,6 +132,27 @@ namespace SANATORIO_HIPOCRATES.Migrations
                 })
                 .Annotation("MySql:CharSet", "utf8mb4");
 
+            migrationBuilder.CreateTable(
+                name: "Turnos",
+                columns: table => new
+                {
+                    IdTurno = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
+                    FechaCreacion = table.Column<DateTime>(type: "datetime(6)", nullable: false),
+                    IdPaciente = table.Column<long>(type: "bigint", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Turnos", x => x.IdTurno);
+                    table.ForeignKey(
+                        name: "FK_Turnos_Pacientes_IdPaciente",
+                        column: x => x.IdPaciente,
+                        principalTable: "Pacientes",
+                        principalColumn: "IdPaciente",
+                        onDelete: ReferentialAction.Cascade);
+                })
+                .Annotation("MySql:CharSet", "utf8mb4");
+
             migrationBuilder.CreateIndex(
                 name: "IX_Empleados_IdPersona",
                 table: "Empleados",
@@ -169,15 +176,17 @@ namespace SANATORIO_HIPOCRATES.Migrations
                 table: "Recepcionistas",
                 column: "IdEmpleado",
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Turnos_IdPaciente",
+                table: "Turnos",
+                column: "IdPaciente");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
                 name: "Medicos");
-
-            migrationBuilder.DropTable(
-                name: "Pacientes");
 
             migrationBuilder.DropTable(
                 name: "Recepcionistas");
@@ -187,6 +196,9 @@ namespace SANATORIO_HIPOCRATES.Migrations
 
             migrationBuilder.DropTable(
                 name: "Empleados");
+
+            migrationBuilder.DropTable(
+                name: "Pacientes");
 
             migrationBuilder.DropTable(
                 name: "Personas");

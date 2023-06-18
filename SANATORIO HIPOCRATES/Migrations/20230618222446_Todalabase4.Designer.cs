@@ -9,8 +9,8 @@ using SANATORIO_HIPOCRATES.Config;
 namespace SANATORIO_HIPOCRATES.Migrations
 {
     [DbContext(typeof(Conexion))]
-    [Migration("20230618212005_Todalabase3")]
-    partial class Todalabase3
+    [Migration("20230618222446_Todalabase4")]
+    partial class Todalabase4
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -156,7 +156,12 @@ namespace SANATORIO_HIPOCRATES.Migrations
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<long>("IdPaciente")
+                        .HasColumnType("bigint");
+
                     b.HasKey("IdTurno");
+
+                    b.HasIndex("IdPaciente");
 
                     b.ToTable("Turnos");
                 });
@@ -203,6 +208,17 @@ namespace SANATORIO_HIPOCRATES.Migrations
                         .IsRequired();
 
                     b.Navigation("Empleado");
+                });
+
+            modelBuilder.Entity("SANATORIO_HIPOCRATES.Entidades.Turno", b =>
+                {
+                    b.HasOne("SANATORIO_HIPOCRATES.Entidades.Paciente", "Paciente")
+                        .WithMany()
+                        .HasForeignKey("IdPaciente")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Paciente");
                 });
 #pragma warning restore 612, 618
         }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace SANATORIO_HIPOCRATES.Excepciones
 {
-    public class PersonaNoExisteException : Exception
+    public class ElementoNoEncontrado : Exception
     {
-        public PersonaNoExisteException(string message) : base(message)
+        public ElementoNoEncontrado(string message) : base(message)
         {
         }
     }

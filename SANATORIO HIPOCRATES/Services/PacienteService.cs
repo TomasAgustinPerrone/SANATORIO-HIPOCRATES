@@ -38,8 +38,8 @@ namespace SANATORIO_HIPOCRATES.Services
                 }
                 else
                 {
-                    MessageBox.Show("No existe un paciente registrado con el nro carnet: " + nroCarnet);
-                    throw new PersonaNoExisteException("No existe un paciente registrado con el nro carnet: " + nroCarnet);
+                    //MessageBox.Show("No existe un paciente registrado con el nro carnet: " + nroCarnet);
+                    throw new ElementoNoEncontrado("No existe un paciente registrado con el nro carnet: " + nroCarnet);
                 }
             }
         }
@@ -58,8 +58,9 @@ namespace SANATORIO_HIPOCRATES.Services
                     MessageBox.Show($"El paciente con nro carnet {nroCarnet} ya está registrado en la base");
                     return pacienteExistente;
                 }
-                catch(PersonaNoExisteException)
+                catch(ElementoNoEncontrado e)
                 {
+                    MessageBox.Show(e.Message);
                     var nuevoPaciente = new Paciente
                     {
                         ObraSocial = obraSocial,
@@ -68,7 +69,7 @@ namespace SANATORIO_HIPOCRATES.Services
                     };
 
                     context.Pacientes.Add(nuevoPaciente);
-                    MessageBox.Show("Se ha creado una persona nueva con el nro carnet" + nuevoPaciente.NumeroCarnet);
+                    MessageBox.Show("Se ha creado una persona nueva con el nro carnet " + nuevoPaciente.NumeroCarnet);
                     context.SaveChanges();
                     return nuevoPaciente;
                 }

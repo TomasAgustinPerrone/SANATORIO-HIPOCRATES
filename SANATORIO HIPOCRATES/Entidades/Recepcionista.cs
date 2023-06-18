@@ -30,7 +30,10 @@ namespace SANATORIO_HIPOCRATES.Entidades
             Paciente pacienteNuevo = pacienteService.CrearPaciente(obraSocial, nroCarnet, personaNueva);
             MessageBox.Show($"El paciente {nombre} {apellido}, DNI: {dni} y nro carnet: {nroCarnet} solicita un turno.");
 
-
+            TurnoService turnoService = new TurnoService();
+            Turno turnoNuevo = turnoService.CrearTurnoEnDB(pacienteNuevo);
+            MessageBox.Show($"Informe al paciente {nombre} {apellido} que aguarde a ser llamado. " +
+                $"\nSu turno es el nro {turnoNuevo.IdTurno}");
         }
 
         public void EliminarTurno()

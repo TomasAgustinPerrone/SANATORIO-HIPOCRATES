@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using SANATORIO_HIPOCRATES.Config;
 using SANATORIO_HIPOCRATES.Entidades;
+using SANATORIO_HIPOCRATES.Services;
 using System;
-
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace SANATORIO_HIPOCRATES
 {
@@ -17,11 +19,17 @@ namespace SANATORIO_HIPOCRATES
 
 
             Recepcionista recepcionistaLaburando = new Recepcionista();
-            recepcionistaLaburando.CrearTurno("9055675895", "Julian", "Perez", 'M', "1234567890",
+            recepcionistaLaburando.CrearTurno("545045095", "Fernando", "Perez", 'M', "1234567890",
                             "juan.perez@example.com", "Calle Falsa 123",
-                            new DateTime(1980, 03, 10), "Argentina", "Galeno", 1210540);
+                            new DateTime(1980, 03, 10), "Argentina", "Galeno", 5450400);
 
 
+            TurnoService turnoService = new TurnoService();
+            List<Turno> turnosEnCola = turnoService.mostrarTodosLosTurnos();
+            foreach (Turno turno in turnosEnCola)
+            {
+                MessageBox.Show($" Turnos en cola: {turno.ToString()}.");
+            }
 
 
             /*

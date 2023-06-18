@@ -39,8 +39,8 @@ namespace SANATORIO_HIPOCRATES.Services
                 }
                 else
                 {
-                    MessageBox.Show("No existe una persona registrada con el dni: " + dni);
-                    throw new PersonaNoExisteException("No existe una persona registrada con el dni: " + dni);
+                    //MessageBox.Show("No existe una persona registrada con el dni: " + dni);
+                    throw new ElementoNoEncontrado("No existe una persona registrada con el dni: " + dni);
                 }
             }
         }
@@ -58,8 +58,9 @@ namespace SANATORIO_HIPOCRATES.Services
                     MessageBox.Show($"La persona con DNI {dni} ya está registrada en la base");
                     return personaExistente;
                 } 
-                catch(PersonaNoExisteException)
+                catch(ElementoNoEncontrado e)
                 {
+                    MessageBox.Show(e.Message);
                     var nuevaPersona = new Persona
                     {
                         Dni = dni,

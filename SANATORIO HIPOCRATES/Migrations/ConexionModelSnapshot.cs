@@ -154,7 +154,12 @@ namespace SANATORIO_HIPOCRATES.Migrations
                     b.Property<DateTime>("FechaCreacion")
                         .HasColumnType("datetime(6)");
 
+                    b.Property<long>("IdPaciente")
+                        .HasColumnType("bigint");
+
                     b.HasKey("IdTurno");
+
+                    b.HasIndex("IdPaciente");
 
                     b.ToTable("Turnos");
                 });
@@ -201,6 +206,17 @@ namespace SANATORIO_HIPOCRATES.Migrations
                         .IsRequired();
 
                     b.Navigation("Empleado");
+                });
+
+            modelBuilder.Entity("SANATORIO_HIPOCRATES.Entidades.Turno", b =>
+                {
+                    b.HasOne("SANATORIO_HIPOCRATES.Entidades.Paciente", "Paciente")
+                        .WithMany()
+                        .HasForeignKey("IdPaciente")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Paciente");
                 });
 #pragma warning restore 612, 618
         }
