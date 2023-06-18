@@ -7,10 +7,9 @@ using System.Threading.Tasks;
 
 namespace SANATORIO_HIPOCRATES.Entidades
 {
-    public class Recepcionista : Empleado
+    public class Recepcionista
     {
-
-        private long idRecepcionista;
+        private Empleado empleado;
 
         public void CrearTurno()
         {
@@ -32,19 +31,20 @@ namespace SANATORIO_HIPOCRATES.Entidades
 
         }
 
-        public Recepcionista(long idPersona, string dni, string nombre, string apellido, string sexo, string telefono, string email, string domicilio, DateTime fechaNacimiento, string nacionalidad, long idEmpleado, string username, string password, DateTime fechaAlta, double salario, long idRecepcionista) : base(idPersona, dni, nombre, apellido, sexo, telefono, email, domicilio, fechaNacimiento, nacionalidad, idEmpleado, username, password, fechaAlta, salario)
+        public Recepcionista(Empleado empleado)
         {
-            this.idRecepcionista = idRecepcionista;
+            this.empleado = empleado;
         }
 
+        [Key]
+        public long IdEmpleado { get; set; }
 
-        public long IdRecepcionista { get => idRecepcionista; set => idRecepcionista = value; }
-
+        public Empleado Empleado { get => empleado; set => empleado = value; }
 
         public override string ToString()
         {
-            return base.ToString() + $", ID Recepcionista: {IdRecepcionista}";
+            return $"ID Empleado: {IdEmpleado}";
         }
-
     }
+
 }

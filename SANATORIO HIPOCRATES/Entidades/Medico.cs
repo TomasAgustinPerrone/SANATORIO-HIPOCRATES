@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace SANATORIO_HIPOCRATES.Entidades
 {
-    public class Medico : Empleado
+    public class Medico
     {
-
-        private long idMedico;
         private string especialidad;
+        private Empleado empleado;
 
         public void AtenderPaciente()
         {
@@ -28,23 +27,23 @@ namespace SANATORIO_HIPOCRATES.Entidades
 
         }
 
-
-        public Medico(long idPersona, string dni, string nombre, string apellido, string sexo, string telefono, string email, string domicilio, DateTime fechaNacimiento, string nacionalidad, long idEmpleado, string username, string password, DateTime fechaAlta, double salario, long idMedico, string especialidad) : base(idPersona, dni, nombre, apellido, sexo, telefono, email, domicilio, fechaNacimiento, nacionalidad, idEmpleado, username, password, fechaAlta, salario)
+        public Medico(string especialidad, Empleado empleado)
         {
-            this.idMedico = idMedico;
             this.especialidad = especialidad;
+            this.empleado = empleado;
         }
 
-
-        public long IdMedico { get => idMedico; set => idMedico = value; }
-
+        [Key]
+        public long IdEmpleado { get; set; }
 
         public string Especialidad { get => especialidad; set => especialidad = value; }
 
+        public Empleado Empleado { get => empleado; set => empleado = value; }
 
         public override string ToString()
         {
-            return base.ToString() + $", ID Medico: {IdMedico}, Especialidad: {Especialidad}";
+            return $"ID Empleado: {IdEmpleado}, Especialidad: {Especialidad}";
         }
     }
+
 }

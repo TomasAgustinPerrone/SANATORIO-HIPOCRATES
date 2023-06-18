@@ -8,8 +8,11 @@ using SANATORIO_HIPOCRATES.Entidades;
 
 namespace SANATORIO_HIPOCRATES.Config
 {
+
     public class Conexion : DbContext
     {
+
+
         public Conexion(DbContextOptions<Conexion> options)
             : base(options)
         { }
@@ -21,5 +24,33 @@ namespace SANATORIO_HIPOCRATES.Config
         public DbSet<Empleado> Empleados { get; set; }
         public DbSet<Recepcionista> Recepcionistas { get; set; }
         public DbSet<Turno> Turnos { get; set; }
+
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Paciente>()
+                .HasOne(p => p.Persona)
+                .WithOne()
+                .HasForeignKey<Paciente>(b => b.IdPersona);
+
+            modelBuilder.Entity<Empleado>()
+                .HasOne(e => e.Persona)
+                .WithOne()
+                .HasForeignKey<Empleado>(e => e.IdPersona);
+
+
+            modelBuilder.Entity<Recepcionista>()
+                .HasOne(p => p.Empleado)
+                .WithOne()
+                .HasForeignKey<Recepcionista>(b => b.IdEmpleado);
+
+            modelBuilder.Entity<Medico>()
+                .HasOne(p => p.Empleado)
+                .WithOne()
+                .HasForeignKey<Medico>(b => b.IdEmpleado);
+
+
+        }
+
     }
 }
