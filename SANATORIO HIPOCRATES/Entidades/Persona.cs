@@ -16,7 +16,7 @@ namespace SANATORIO_HIPOCRATES.Entidades
         private string dni;
         private string nombre;
         private string apellido;
-        private string sexo;
+        private char sexo;
         private string telefono;
         private string email;
         private string domicilio;
@@ -34,7 +34,7 @@ namespace SANATORIO_HIPOCRATES.Entidades
         {
         }
 
-        public Persona(long idPersona, string dni, string nombre, string apellido, string sexo, string telefono, string email, string domicilio, DateTime fechaNacimiento, string nacionalidad)
+        public Persona(long idPersona, string dni, string nombre, string apellido, char sexo, string telefono, string email, string domicilio, DateTime fechaNacimiento, string nacionalidad)
         {
             this.idPersona = idPersona;
             this.dni = dni;
@@ -62,7 +62,7 @@ namespace SANATORIO_HIPOCRATES.Entidades
         public string Dni { get => dni; set => dni = value; }
         public string Nombre { get => nombre; set => nombre = value; }
         public string Apellido { get => apellido; set => apellido = value; }
-        public string Sexo { get => sexo; set => sexo = value; }
+        public char Sexo { get => sexo; set => sexo = value; }
         public string Telefono { get => telefono; set => telefono = value; }
         public string Email { get => email; set => email = value; }
         public string Domicilio { get => domicilio; set => domicilio = value; }

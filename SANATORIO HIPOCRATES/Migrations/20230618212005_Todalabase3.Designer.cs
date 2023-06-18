@@ -9,8 +9,8 @@ using SANATORIO_HIPOCRATES.Config;
 namespace SANATORIO_HIPOCRATES.Migrations
 {
     [DbContext(typeof(Conexion))]
-    [Migration("20230618190527_Todalabase")]
-    partial class Todalabase
+    [Migration("20230618212005_Todalabase3")]
+    partial class Todalabase3
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,19 +50,30 @@ namespace SANATORIO_HIPOCRATES.Migrations
 
             modelBuilder.Entity("SANATORIO_HIPOCRATES.Entidades.Medico", b =>
                 {
-                    b.Property<long>("IdEmpleado")
+                    b.Property<long>("IdMedico")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
                     b.Property<string>("Especialidad")
                         .HasColumnType("longtext");
 
-                    b.HasKey("IdEmpleado");
+                    b.Property<long>("IdEmpleado")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("IdMedico");
+
+                    b.HasIndex("IdEmpleado")
+                        .IsUnique();
 
                     b.ToTable("Medicos");
                 });
 
             modelBuilder.Entity("SANATORIO_HIPOCRATES.Entidades.Paciente", b =>
                 {
+                    b.Property<long>("IdPaciente")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
                     b.Property<long>("IdPersona")
                         .HasColumnType("bigint");
 
@@ -72,7 +83,10 @@ namespace SANATORIO_HIPOCRATES.Migrations
                     b.Property<string>("ObraSocial")
                         .HasColumnType("longtext");
 
-                    b.HasKey("IdPersona");
+                    b.HasKey("IdPaciente");
+
+                    b.HasIndex("IdPersona")
+                        .IsUnique();
 
                     b.ToTable("Pacientes");
                 });
@@ -105,7 +119,8 @@ namespace SANATORIO_HIPOCRATES.Migrations
                         .HasColumnType("longtext");
 
                     b.Property<string>("Sexo")
-                        .HasColumnType("longtext");
+                        .IsRequired()
+                        .HasColumnType("varchar(1)");
 
                     b.Property<string>("Telefono")
                         .HasColumnType("longtext");
@@ -117,10 +132,17 @@ namespace SANATORIO_HIPOCRATES.Migrations
 
             modelBuilder.Entity("SANATORIO_HIPOCRATES.Entidades.Recepcionista", b =>
                 {
+                    b.Property<long>("IdRecepcionista")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
                     b.Property<long>("IdEmpleado")
                         .HasColumnType("bigint");
 
-                    b.HasKey("IdEmpleado");
+                    b.HasKey("IdRecepcionista");
+
+                    b.HasIndex("IdEmpleado")
+                        .IsUnique();
 
                     b.ToTable("Recepcionistas");
                 });

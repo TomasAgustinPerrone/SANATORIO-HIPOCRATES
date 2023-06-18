@@ -14,6 +14,17 @@ namespace SANATORIO_HIPOCRATES
         [STAThread]
         static void Main()
         {
+
+
+            Recepcionista recepcionistaLaburando = new Recepcionista();
+            recepcionistaLaburando.CrearTurno("9055675895", "Julian", "Perez", 'M', "1234567890",
+                            "juan.perez@example.com", "Calle Falsa 123",
+                            new DateTime(1980, 03, 10), "Argentina", "Galeno", 1210540);
+
+
+
+
+            /*
             var optionsBuilder = new DbContextOptionsBuilder<Conexion>();
             optionsBuilder.UseMySql("Server=localhost;Database=sanatorio;Uid=root;Pwd=123456;",
                 new MySqlServerVersion(new Version(8, 0, 21)) // or whatever version you have
@@ -22,12 +33,15 @@ namespace SANATORIO_HIPOCRATES
 
             using (var context = new Conexion(optionsBuilder.Options))
             {
+
+
+                
                 var nuevaPersona = new Persona
                 {
                     Dni = "12345678",
                     Nombre = "Juan",
                     Apellido = "Perez",
-                    Sexo = "M",
+                    Sexo = 'M',
                     Telefono = "1234567890",
                     Email = "juan.perez@example.com",
                     Domicilio = "Calle Falsa 123",
@@ -59,7 +73,7 @@ namespace SANATORIO_HIPOCRATES
                     Dni = "12345678",
                     Nombre = "Esteban",
                     Apellido = "Perez",
-                    Sexo = "M",
+                    Sexo = 'M',
                     Telefono = "1234567890",
                     Email = "juan.perez@example.com",
                     Domicilio = "Calle Falsa 123",
@@ -103,18 +117,18 @@ namespace SANATORIO_HIPOCRATES
                 context.Medicos.Add(nuevoMedico);
                 context.SaveChanges();
 
-
-
-            }
-
-            /*
-            Application.SetHighDpiMode(HighDpiMode.SystemAware);
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-            */
-
+                */
 
         }
+
+        /*
+        Application.SetHighDpiMode(HighDpiMode.SystemAware);
+        Application.EnableVisualStyles();
+        Application.SetCompatibleTextRenderingDefault(false);
+        Application.Run(new Form1());
+        */
+
+
+    
     }
 }

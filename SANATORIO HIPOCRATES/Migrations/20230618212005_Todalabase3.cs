@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SANATORIO_HIPOCRATES.Migrations
 {
-    public partial class Todalabase : Migration
+    public partial class Todalabase3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -23,7 +23,7 @@ namespace SANATORIO_HIPOCRATES.Migrations
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Apellido = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    Sexo = table.Column<string>(type: "longtext", nullable: true)
+                    Sexo = table.Column<string>(type: "varchar(1)", nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
                     Telefono = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -85,6 +85,8 @@ namespace SANATORIO_HIPOCRATES.Migrations
                 name: "Pacientes",
                 columns: table => new
                 {
+                    IdPaciente = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     IdPersona = table.Column<long>(type: "bigint", nullable: false),
                     ObraSocial = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4"),
@@ -92,7 +94,7 @@ namespace SANATORIO_HIPOCRATES.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Pacientes", x => x.IdPersona);
+                    table.PrimaryKey("PK_Pacientes", x => x.IdPaciente);
                     table.ForeignKey(
                         name: "FK_Pacientes_Personas_IdPersona",
                         column: x => x.IdPersona,
@@ -106,13 +108,15 @@ namespace SANATORIO_HIPOCRATES.Migrations
                 name: "Medicos",
                 columns: table => new
                 {
+                    IdMedico = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     IdEmpleado = table.Column<long>(type: "bigint", nullable: false),
                     Especialidad = table.Column<string>(type: "longtext", nullable: true)
                         .Annotation("MySql:CharSet", "utf8mb4")
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Medicos", x => x.IdEmpleado);
+                    table.PrimaryKey("PK_Medicos", x => x.IdMedico);
                     table.ForeignKey(
                         name: "FK_Medicos_Empleados_IdEmpleado",
                         column: x => x.IdEmpleado,
@@ -126,11 +130,13 @@ namespace SANATORIO_HIPOCRATES.Migrations
                 name: "Recepcionistas",
                 columns: table => new
                 {
+                    IdRecepcionista = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     IdEmpleado = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Recepcionistas", x => x.IdEmpleado);
+                    table.PrimaryKey("PK_Recepcionistas", x => x.IdRecepcionista);
                     table.ForeignKey(
                         name: "FK_Recepcionistas_Empleados_IdEmpleado",
                         column: x => x.IdEmpleado,
@@ -144,6 +150,24 @@ namespace SANATORIO_HIPOCRATES.Migrations
                 name: "IX_Empleados_IdPersona",
                 table: "Empleados",
                 column: "IdPersona",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Medicos_IdEmpleado",
+                table: "Medicos",
+                column: "IdEmpleado",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Pacientes_IdPersona",
+                table: "Pacientes",
+                column: "IdPersona",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Recepcionistas_IdEmpleado",
+                table: "Recepcionistas",
+                column: "IdEmpleado",
                 unique: true);
         }
 

@@ -1,18 +1,35 @@
-﻿using System;
+﻿using SANATORIO_HIPOCRATES.Excepciones;
+using SANATORIO_HIPOCRATES.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SANATORIO_HIPOCRATES.Entidades
 {
     public class Recepcionista
     {
+        private long idRecepcionista;
         private Empleado empleado;
 
-        public void CrearTurno()
+        public void CrearTurno(string dni, string nombre, string apellido, char sexo, string telefono,
+            string email, string domicilio, DateTime fechaNacimiento, string nacionalidad, string obraSocial, long nroCarnet)
         {
+
+            PersonaService personaService = new PersonaService();
+            Persona personaNueva = personaService.CrearPersona(dni, nombre, apellido, sexo, telefono,
+                                    email, domicilio, fechaNacimiento, nacionalidad);
+
+            PacienteService pacienteService = new PacienteService();
+            Paciente pacienteNuevo = pacienteService.CrearPaciente(obraSocial, nroCarnet, personaNueva);
+            MessageBox.Show($"El paciente {nombre} {apellido}, DNI: {dni} y nro carnet: {nroCarnet} solicita un turno.");
+
 
         }
 
@@ -37,8 +54,12 @@ namespace SANATORIO_HIPOCRATES.Entidades
         }
 
         [Key]
+        public long IdRecepcionista { get => idRecepcionista; set => idRecepcionista = value; }
+
+
         public long IdEmpleado { get; set; }
 
+        [ForeignKey("IdEmpleado")]
         public Empleado Empleado { get => empleado; set => empleado = value; }
 
         public override string ToString()
