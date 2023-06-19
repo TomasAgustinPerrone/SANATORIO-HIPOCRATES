@@ -54,11 +54,10 @@ namespace SANATORIO_HIPOCRATES
             // txtContra
             // 
             this.txtContra.BackColor = System.Drawing.Color.White;
-            
             this.txtContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.txtContra.Location = new System.Drawing.Point(432, 185);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(209, 28);
+            this.txtContra.Size = new System.Drawing.Size(209, 23);
             this.txtContra.TabIndex = 2;
             this.txtContra.Text = "Contraseña";
             this.txtContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -91,7 +90,7 @@ namespace SANATORIO_HIPOCRATES
             this.txtLogin.Location = new System.Drawing.Point(496, 107);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.ReadOnly = true;
-            this.txtLogin.Size = new System.Drawing.Size(76, 24);
+            this.txtLogin.Size = new System.Drawing.Size(76, 16);
             this.txtLogin.TabIndex = 0;
             this.txtLogin.Text = "Login";
             this.txtLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -103,7 +102,7 @@ namespace SANATORIO_HIPOCRATES
             this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.txtUser.Location = new System.Drawing.Point(432, 137);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(209, 28);
+            this.txtUser.Size = new System.Drawing.Size(209, 23);
             this.txtUser.TabIndex = 1;
             this.txtUser.Text = "Usuario";
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -131,7 +130,7 @@ namespace SANATORIO_HIPOCRATES
             this.linkContra.LinkColor = System.Drawing.Color.White;
             this.linkContra.Location = new System.Drawing.Point(454, 273);
             this.linkContra.Name = "linkContra";
-            this.linkContra.Size = new System.Drawing.Size(171, 16);
+            this.linkContra.Size = new System.Drawing.Size(157, 15);
             this.linkContra.TabIndex = 0;
             this.linkContra.TabStop = true;
             this.linkContra.Text = "?Ha olvidado su contraseña¿";

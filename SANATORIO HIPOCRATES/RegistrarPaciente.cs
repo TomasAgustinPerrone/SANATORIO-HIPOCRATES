@@ -66,5 +66,20 @@ namespace SANATORIO_HIPOCRATES
         {
 
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            inputDNI.Text = "";
+            inputNombre.Text = "";
+            inputApellido.Text = "";
+            inputMail.Text = "";
+            inputNacionalidad.Text = "";
+            inputSexo.Text = "";
+            inputTlf.Text = "";
+            inputDomicilio.Text = "";
+            inputFechaNac.Text = "";
+            inputObraSocial.Text = "";
+            inputCarnet.Text = "";
+        }
     }
 }

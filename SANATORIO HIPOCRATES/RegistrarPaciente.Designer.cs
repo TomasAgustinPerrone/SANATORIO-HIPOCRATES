@@ -55,7 +55,6 @@ namespace SANATORIO_HIPOCRATES
             this.inputObraSocial = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.inputCarnet = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
@@ -83,6 +82,7 @@ namespace SANATORIO_HIPOCRATES
             this.button3.TabIndex = 16;
             this.button3.Text = "Borrar datos";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button1
             // 
@@ -138,9 +138,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputDNI.ForeColor = System.Drawing.Color.Silver;
             this.inputDNI.Location = new System.Drawing.Point(294, 85);
             this.inputDNI.Name = "inputDNI";
+            this.inputDNI.PlaceholderText = "Ingrese DNI";
             this.inputDNI.Size = new System.Drawing.Size(292, 23);
             this.inputDNI.TabIndex = 25;
-            this.inputDNI.Text = "Ingrese DNI";
             this.inputDNI.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // label2
@@ -159,9 +159,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputNombre.ForeColor = System.Drawing.Color.Silver;
             this.inputNombre.Location = new System.Drawing.Point(294, 148);
             this.inputNombre.Name = "inputNombre";
+            this.inputNombre.PlaceholderText = "Ingrese NOMBRE";
             this.inputNombre.Size = new System.Drawing.Size(292, 23);
             this.inputNombre.TabIndex = 27;
-            this.inputNombre.Text = "Ingrese NOMBRE";
             // 
             // label3
             // 
@@ -179,9 +179,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputApellido.ForeColor = System.Drawing.Color.Silver;
             this.inputApellido.Location = new System.Drawing.Point(294, 216);
             this.inputApellido.Name = "inputApellido";
+            this.inputApellido.PlaceholderText = "Ingrese APELLIDO";
             this.inputApellido.Size = new System.Drawing.Size(292, 23);
             this.inputApellido.TabIndex = 29;
-            this.inputApellido.Text = "Ingrese APELLIDO";
             // 
             // label4
             // 
@@ -209,9 +209,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputTlf.ForeColor = System.Drawing.Color.Silver;
             this.inputTlf.Location = new System.Drawing.Point(293, 354);
             this.inputTlf.Name = "inputTlf";
+            this.inputTlf.PlaceholderText = "Ej: 1135222048";
             this.inputTlf.Size = new System.Drawing.Size(292, 23);
             this.inputTlf.TabIndex = 34;
-            this.inputTlf.Text = "Ej: 1135222048";
             // 
             // label7
             // 
@@ -229,9 +229,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputMail.ForeColor = System.Drawing.Color.Silver;
             this.inputMail.Location = new System.Drawing.Point(293, 424);
             this.inputMail.Name = "inputMail";
+            this.inputMail.PlaceholderText = "Ejemplo@xxxx.com";
             this.inputMail.Size = new System.Drawing.Size(292, 23);
             this.inputMail.TabIndex = 37;
-            this.inputMail.Text = "Ejemplo@xxxx.com";
             this.inputMail.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
             // inputDomicilio
@@ -240,9 +240,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputDomicilio.ForeColor = System.Drawing.Color.Silver;
             this.inputDomicilio.Location = new System.Drawing.Point(295, 491);
             this.inputDomicilio.Name = "inputDomicilio";
+            this.inputDomicilio.PlaceholderText = "Calle Numero Dpto/Piso Localidad";
             this.inputDomicilio.Size = new System.Drawing.Size(292, 23);
             this.inputDomicilio.TabIndex = 39;
-            this.inputDomicilio.Text = "Calle Numero Dpto/Piso";
             // 
             // label8
             // 
@@ -270,9 +270,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputNacionalidad.ForeColor = System.Drawing.Color.Silver;
             this.inputNacionalidad.Location = new System.Drawing.Point(666, 85);
             this.inputNacionalidad.Name = "inputNacionalidad";
+            this.inputNacionalidad.PlaceholderText = "Ingrese Nacionalidad";
             this.inputNacionalidad.Size = new System.Drawing.Size(292, 23);
             this.inputNacionalidad.TabIndex = 42;
-            this.inputNacionalidad.Text = "Ingrese Nacionalidad";
             // 
             // label11
             // 
@@ -290,9 +290,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputFechaNac.ForeColor = System.Drawing.Color.Silver;
             this.inputFechaNac.Location = new System.Drawing.Point(666, 148);
             this.inputFechaNac.Name = "inputFechaNac";
+            this.inputFechaNac.PlaceholderText = "dd-mm-aaaa";
             this.inputFechaNac.Size = new System.Drawing.Size(292, 23);
             this.inputFechaNac.TabIndex = 44;
-            this.inputFechaNac.Text = "dd-mm-aaaa";
             this.inputFechaNac.TextChanged += new System.EventHandler(this.inputFechaNac_TextChanged);
             // 
             // label13
@@ -311,9 +311,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputObraSocial.ForeColor = System.Drawing.Color.Silver;
             this.inputObraSocial.Location = new System.Drawing.Point(666, 216);
             this.inputObraSocial.Name = "inputObraSocial";
+            this.inputObraSocial.PlaceholderText = "Ingrese Obra social";
             this.inputObraSocial.Size = new System.Drawing.Size(292, 23);
             this.inputObraSocial.TabIndex = 48;
-            this.inputObraSocial.Text = "Ingrese Obra social";
             this.inputObraSocial.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
             // 
             // label14
@@ -332,25 +332,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputCarnet.ForeColor = System.Drawing.Color.Silver;
             this.inputCarnet.Location = new System.Drawing.Point(666, 284);
             this.inputCarnet.Name = "inputCarnet";
+            this.inputCarnet.PlaceholderText = "Ingrese Numero de afiliado";
             this.inputCarnet.Size = new System.Drawing.Size(292, 23);
             this.inputCarnet.TabIndex = 50;
-            this.inputCarnet.Text = "Ingrese Numero de afiliado";
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2.Location = new System.Drawing.Point(43, 572);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(157, 30);
-            this.button2.TabIndex = 55;
-            this.button2.Text = "Cerrar sesion";
-            this.button2.UseVisualStyleBackColor = false;
             // 
             // pictureBox2
             // 
@@ -386,7 +370,6 @@ namespace SANATORIO_HIPOCRATES
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(187)))));
-            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
@@ -399,9 +382,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputSexo.ForeColor = System.Drawing.Color.Silver;
             this.inputSexo.Location = new System.Drawing.Point(293, 284);
             this.inputSexo.Name = "inputSexo";
+            this.inputSexo.PlaceholderText = "Ingrese F= Femenino M=Masculino";
             this.inputSexo.Size = new System.Drawing.Size(292, 23);
             this.inputSexo.TabIndex = 60;
-            this.inputSexo.Text = "Ingrese F= Femenino M=Masculino";
             // 
             // RegistrarPaciente
             // 
@@ -478,7 +461,6 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.TextBox inputObraSocial;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox inputCarnet;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox btnCerrar;

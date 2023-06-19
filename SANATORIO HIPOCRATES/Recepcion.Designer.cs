@@ -152,7 +152,7 @@ namespace SANATORIO_HIPOCRATES
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(342, 0);
+            this.label5.Location = new System.Drawing.Point(344, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(108, 15);
             this.label5.TabIndex = 14;
@@ -165,9 +165,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputDNI.ForeColor = System.Drawing.Color.Silver;
             this.inputDNI.Location = new System.Drawing.Point(339, 100);
             this.inputDNI.Name = "inputDNI";
+            this.inputDNI.PlaceholderText = "Ingrese DNI";
             this.inputDNI.Size = new System.Drawing.Size(292, 23);
             this.inputDNI.TabIndex = 6;
-            this.inputDNI.Text = "Ingrese DNI";
             this.inputDNI.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // label1
@@ -245,14 +245,16 @@ namespace SANATORIO_HIPOCRATES
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCerrar.TabIndex = 22;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(255, 9);
+            this.label6.Location = new System.Drawing.Point(255, 22);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(148, 15);
+            this.label6.Size = new System.Drawing.Size(237, 25);
             this.label6.TabIndex = 23;
             this.label6.Text = "RECEPCION DE PACIENTES";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -273,9 +275,9 @@ namespace SANATORIO_HIPOCRATES
             this.inputCarnet.ForeColor = System.Drawing.Color.Silver;
             this.inputCarnet.Location = new System.Drawing.Point(339, 151);
             this.inputCarnet.Name = "inputCarnet";
+            this.inputCarnet.PlaceholderText = "Ingrese Carnet";
             this.inputCarnet.Size = new System.Drawing.Size(292, 23);
             this.inputCarnet.TabIndex = 29;
-            this.inputCarnet.Text = "Ingrese Carnet";
             this.inputCarnet.TextChanged += new System.EventHandler(this.inputCarnet_TextChanged);
             // 
             // buscarPacientePorCarnet
@@ -298,7 +300,7 @@ namespace SANATORIO_HIPOCRATES
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(342, 0);
+            this.label4.Location = new System.Drawing.Point(357, -1);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(95, 15);
             this.label4.TabIndex = 15;

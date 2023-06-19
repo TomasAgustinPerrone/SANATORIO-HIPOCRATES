@@ -156,6 +156,7 @@ namespace SANATORIO_HIPOCRATES
 
         }
 
+
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
@@ -202,6 +203,11 @@ namespace SANATORIO_HIPOCRATES
         {
             RegistrarPaciente registrarPaciente = new RegistrarPaciente();
             registrarPaciente.Show();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

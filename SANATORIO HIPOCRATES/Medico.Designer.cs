@@ -85,7 +85,7 @@ namespace SANATORIO_HIPOCRATES
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label6.Location = new System.Drawing.Point(255, 25);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(410, 41);
+            this.label6.Size = new System.Drawing.Size(142, 15);
             this.label6.TabIndex = 61;
             this.label6.Text = "ATENCION DE PACIENTES";
             // 
@@ -103,7 +103,7 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.pictureBox3.Location = new System.Drawing.Point(275, 103);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(774, 403);
+            this.pictureBox3.Size = new System.Drawing.Size(757, 411);
             this.pictureBox3.TabIndex = 63;
             this.pictureBox3.TabStop = false;
             // 
