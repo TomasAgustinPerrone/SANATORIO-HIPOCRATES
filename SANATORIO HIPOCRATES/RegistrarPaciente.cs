@@ -89,7 +89,6 @@ namespace SANATORIO_HIPOCRATES
             }
 
 
-
             recepcionista.CrearPersona(dni, nombre, apellido, sexo, telefono, email, domicilio, fecha, nacionalidad, obraSocial, numeroCarnet);
         }
 
@@ -126,6 +125,11 @@ namespace SANATORIO_HIPOCRATES
             inputFechaNac.Text = "";
             inputObraSocial.Text = "";
             inputCarnet.Text = "";
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -1,10 +1,13 @@
-﻿using SANATORIO_HIPOCRATES.Entidades;
+﻿using iTextSharp.text.pdf;
+using iTextSharp.text;
+using SANATORIO_HIPOCRATES.Entidades;
 using SANATORIO_HIPOCRATES.Services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -198,6 +201,19 @@ namespace SANATORIO_HIPOCRATES
 
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = turnos;
+
+            Document doc = new Document();
+            PdfWriter.GetInstance(doc, new FileStream($"{turnos[0].IdPaciente}_turno.pdf", FileMode.Create));
+            doc.Open();
+            doc.Add(new Paragraph("Sanatorio Hipocrates \n" +
+                "Avenida Independencia 1127, CABA" +
+                "\n___________________________________________________________________"+
+                "\n\nFecha:" + DateTime.Now +
+                "\n\n" +
+                "ID del paciente: " + turnos[0].IdPaciente + "Nro de turno: " + turnos[0].IdTurno + 
+                "QUE DICE LA BAAAAAAAAAANDA"
+                ));
+            doc.Close();
         }
 
         private void inputCarnet_TextChanged(object sender, EventArgs e)
