@@ -43,7 +43,7 @@ namespace SANATORIO_HIPOCRATES
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Recepcion());
+            Application.Run(new Form1());
         }
 
 

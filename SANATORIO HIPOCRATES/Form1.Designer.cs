@@ -54,8 +54,8 @@ namespace SANATORIO_HIPOCRATES
             // txtContra
             // 
             this.txtContra.BackColor = System.Drawing.Color.White;
-            this.txtContra.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txtContra.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtContra.ForeColor = System.Drawing.Color.CadetBlue;
             this.txtContra.Location = new System.Drawing.Point(432, 185);
             this.txtContra.Name = "txtContra";
             this.txtContra.Size = new System.Drawing.Size(209, 27);
@@ -102,8 +102,8 @@ namespace SANATORIO_HIPOCRATES
             // txtUser
             // 
             this.txtUser.BackColor = System.Drawing.Color.White;
-            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.txtUser.ForeColor = System.Drawing.Color.CadetBlue;
             this.txtUser.Location = new System.Drawing.Point(432, 137);
             this.txtUser.Name = "txtUser";
             this.txtUser.Size = new System.Drawing.Size(209, 27);
