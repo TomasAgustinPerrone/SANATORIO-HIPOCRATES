@@ -159,5 +159,114 @@ namespace SANATORIO_HIPOCRATES
         {
             this.Hide();
         }
+        private bool isMaximized = false;
+        private void btnMaximizar_Click(object sender, EventArgs e)
+        {
+            if (isMaximized)
+            {
+                this.WindowState = FormWindowState.Normal; // Restaura la ventana al tamaño normal
+                isMaximized = false;
+            }
+            else
+            {
+                this.WindowState = FormWindowState.Maximized; // Maximiza la ventana
+                isMaximized = true;
+            }
+
+        }
+        private void btnCerrar_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btnMinimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void RegistrarPaciente_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputNombre_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputApellido_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputSexo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputTlf_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputDomicilio_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputCarnet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

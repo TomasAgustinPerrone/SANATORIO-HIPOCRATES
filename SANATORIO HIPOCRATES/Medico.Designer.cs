@@ -82,10 +82,11 @@ namespace SANATORIO_HIPOCRATES
             // label6
             // 
             this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.label6.Location = new System.Drawing.Point(255, 25);
+            this.label6.Location = new System.Drawing.Point(275, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(142, 15);
+            this.label6.Size = new System.Drawing.Size(268, 30);
             this.label6.TabIndex = 61;
             this.label6.Text = "ATENCION DE PACIENTES";
             // 
