@@ -35,44 +35,33 @@ namespace SANATORIO_HIPOCRATES
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.inputDNI = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.inputNombre = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.inputApellido = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.inputTlf = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.inputMail = new System.Windows.Forms.TextBox();
-            this.inputDomicilio = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.inputNacionalidad = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.inputFechaNac = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.inputObraSocial = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.inputCarnet = new System.Windows.Forms.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.inputSexo = new System.Windows.Forms.TextBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.inputDNI = new System.Windows.Forms.TextBox();
+            this.inputNombre = new System.Windows.Forms.TextBox();
+            this.inputApellido = new System.Windows.Forms.TextBox();
+            this.inputSexo = new System.Windows.Forms.TextBox();
+            this.inputTlf = new System.Windows.Forms.TextBox();
+            this.inputMail = new System.Windows.Forms.TextBox();
+            this.inputDomicilio = new System.Windows.Forms.TextBox();
+            this.inputNacionalidad = new System.Windows.Forms.TextBox();
+            this.inputFechaNac = new System.Windows.Forms.TextBox();
+            this.inputObraSocial = new System.Windows.Forms.TextBox();
+            this.inputCarnet = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -152,18 +141,6 @@ namespace SANATORIO_HIPOCRATES
             this.label1.Text = "DNI";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // inputDNI
-            // 
-            this.inputDNI.BackColor = System.Drawing.Color.White;
-            this.inputDNI.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputDNI.ForeColor = System.Drawing.Color.Silver;
-            this.inputDNI.Location = new System.Drawing.Point(291, 86);
-            this.inputDNI.Name = "inputDNI";
-            this.inputDNI.PlaceholderText = "Ingrese DNI";
-            this.inputDNI.Size = new System.Drawing.Size(292, 27);
-            this.inputDNI.TabIndex = 25;
-            this.inputDNI.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -176,18 +153,6 @@ namespace SANATORIO_HIPOCRATES
             this.label2.Text = "Nombre";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
-            // inputNombre
-            // 
-            this.inputNombre.BackColor = System.Drawing.Color.White;
-            this.inputNombre.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputNombre.ForeColor = System.Drawing.Color.Silver;
-            this.inputNombre.Location = new System.Drawing.Point(294, 148);
-            this.inputNombre.Name = "inputNombre";
-            this.inputNombre.PlaceholderText = "Ingrese NOMBRE";
-            this.inputNombre.Size = new System.Drawing.Size(292, 27);
-            this.inputNombre.TabIndex = 27;
-            this.inputNombre.TextChanged += new System.EventHandler(this.inputNombre_TextChanged);
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -199,18 +164,6 @@ namespace SANATORIO_HIPOCRATES
             this.label3.TabIndex = 30;
             this.label3.Text = "Apellido";
             this.label3.Click += new System.EventHandler(this.label3_Click);
-            // 
-            // inputApellido
-            // 
-            this.inputApellido.BackColor = System.Drawing.Color.White;
-            this.inputApellido.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputApellido.ForeColor = System.Drawing.Color.Silver;
-            this.inputApellido.Location = new System.Drawing.Point(294, 216);
-            this.inputApellido.Name = "inputApellido";
-            this.inputApellido.PlaceholderText = "Ingrese APELLIDO";
-            this.inputApellido.Size = new System.Drawing.Size(292, 27);
-            this.inputApellido.TabIndex = 29;
-            this.inputApellido.TextChanged += new System.EventHandler(this.inputApellido_TextChanged);
             // 
             // label4
             // 
@@ -236,18 +189,6 @@ namespace SANATORIO_HIPOCRATES
             this.label5.Text = "Telefono";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // inputTlf
-            // 
-            this.inputTlf.BackColor = System.Drawing.Color.White;
-            this.inputTlf.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputTlf.ForeColor = System.Drawing.Color.Silver;
-            this.inputTlf.Location = new System.Drawing.Point(293, 354);
-            this.inputTlf.Name = "inputTlf";
-            this.inputTlf.PlaceholderText = "Ej: 1135222048";
-            this.inputTlf.Size = new System.Drawing.Size(292, 27);
-            this.inputTlf.TabIndex = 34;
-            this.inputTlf.TextChanged += new System.EventHandler(this.inputTlf_TextChanged);
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -259,30 +200,6 @@ namespace SANATORIO_HIPOCRATES
             this.label7.TabIndex = 36;
             this.label7.Text = "Email";
             this.label7.Click += new System.EventHandler(this.label7_Click);
-            // 
-            // inputMail
-            // 
-            this.inputMail.BackColor = System.Drawing.Color.White;
-            this.inputMail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputMail.ForeColor = System.Drawing.Color.Silver;
-            this.inputMail.Location = new System.Drawing.Point(293, 424);
-            this.inputMail.Name = "inputMail";
-            this.inputMail.PlaceholderText = "Ejemplo@xxxx.com";
-            this.inputMail.Size = new System.Drawing.Size(292, 27);
-            this.inputMail.TabIndex = 37;
-            this.inputMail.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
-            // 
-            // inputDomicilio
-            // 
-            this.inputDomicilio.BackColor = System.Drawing.Color.White;
-            this.inputDomicilio.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputDomicilio.ForeColor = System.Drawing.Color.Silver;
-            this.inputDomicilio.Location = new System.Drawing.Point(295, 491);
-            this.inputDomicilio.Name = "inputDomicilio";
-            this.inputDomicilio.PlaceholderText = "Calle Numero Dpto/Piso Localidad";
-            this.inputDomicilio.Size = new System.Drawing.Size(292, 27);
-            this.inputDomicilio.TabIndex = 39;
-            this.inputDomicilio.TextChanged += new System.EventHandler(this.inputDomicilio_TextChanged);
             // 
             // label8
             // 
@@ -307,17 +224,6 @@ namespace SANATORIO_HIPOCRATES
             this.label10.TabIndex = 43;
             this.label10.Text = "Nacionalidad";
             // 
-            // inputNacionalidad
-            // 
-            this.inputNacionalidad.BackColor = System.Drawing.Color.White;
-            this.inputNacionalidad.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputNacionalidad.ForeColor = System.Drawing.Color.Silver;
-            this.inputNacionalidad.Location = new System.Drawing.Point(666, 85);
-            this.inputNacionalidad.Name = "inputNacionalidad";
-            this.inputNacionalidad.PlaceholderText = "Ingrese Nacionalidad";
-            this.inputNacionalidad.Size = new System.Drawing.Size(292, 27);
-            this.inputNacionalidad.TabIndex = 42;
-            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -329,18 +235,6 @@ namespace SANATORIO_HIPOCRATES
             this.label11.TabIndex = 45;
             this.label11.Text = "Fecha de nacimiento";
             this.label11.Click += new System.EventHandler(this.label11_Click);
-            // 
-            // inputFechaNac
-            // 
-            this.inputFechaNac.BackColor = System.Drawing.Color.White;
-            this.inputFechaNac.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputFechaNac.ForeColor = System.Drawing.Color.Silver;
-            this.inputFechaNac.Location = new System.Drawing.Point(666, 148);
-            this.inputFechaNac.Name = "inputFechaNac";
-            this.inputFechaNac.PlaceholderText = "dd-mm-aaaa";
-            this.inputFechaNac.Size = new System.Drawing.Size(292, 27);
-            this.inputFechaNac.TabIndex = 44;
-            this.inputFechaNac.TextChanged += new System.EventHandler(this.inputFechaNac_TextChanged);
             // 
             // label13
             // 
@@ -354,18 +248,6 @@ namespace SANATORIO_HIPOCRATES
             this.label13.Text = "Nombre de Obra social";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
-            // inputObraSocial
-            // 
-            this.inputObraSocial.BackColor = System.Drawing.Color.White;
-            this.inputObraSocial.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputObraSocial.ForeColor = System.Drawing.Color.Silver;
-            this.inputObraSocial.Location = new System.Drawing.Point(666, 216);
-            this.inputObraSocial.Name = "inputObraSocial";
-            this.inputObraSocial.PlaceholderText = "Ingrese Obra social";
-            this.inputObraSocial.Size = new System.Drawing.Size(292, 27);
-            this.inputObraSocial.TabIndex = 48;
-            this.inputObraSocial.TextChanged += new System.EventHandler(this.textBox10_TextChanged);
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -377,18 +259,6 @@ namespace SANATORIO_HIPOCRATES
             this.label14.TabIndex = 51;
             this.label14.Text = "Numero de afiliado al sanatorio";
             this.label14.Click += new System.EventHandler(this.label14_Click);
-            // 
-            // inputCarnet
-            // 
-            this.inputCarnet.BackColor = System.Drawing.Color.White;
-            this.inputCarnet.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputCarnet.ForeColor = System.Drawing.Color.Silver;
-            this.inputCarnet.Location = new System.Drawing.Point(666, 284);
-            this.inputCarnet.Name = "inputCarnet";
-            this.inputCarnet.PlaceholderText = "Ingrese Numero de afiliado";
-            this.inputCarnet.Size = new System.Drawing.Size(292, 27);
-            this.inputCarnet.TabIndex = 50;
-            this.inputCarnet.TextChanged += new System.EventHandler(this.inputCarnet_TextChanged);
             // 
             // pictureBox2
             // 
@@ -419,18 +289,6 @@ namespace SANATORIO_HIPOCRATES
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 613);
             this.panel1.TabIndex = 59;
-            // 
-            // inputSexo
-            // 
-            this.inputSexo.BackColor = System.Drawing.Color.White;
-            this.inputSexo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputSexo.ForeColor = System.Drawing.Color.Silver;
-            this.inputSexo.Location = new System.Drawing.Point(293, 284);
-            this.inputSexo.Name = "inputSexo";
-            this.inputSexo.PlaceholderText = "Ingrese F= Femenino M=Masculino";
-            this.inputSexo.Size = new System.Drawing.Size(292, 27);
-            this.inputSexo.TabIndex = 60;
-            this.inputSexo.TextChanged += new System.EventHandler(this.inputSexo_TextChanged);
             // 
             // btnCerrar
             // 
@@ -468,126 +326,126 @@ namespace SANATORIO_HIPOCRATES
             this.btnMaximizar.TabStop = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
-            // textBox1
+            // inputDNI
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(291, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PlaceholderText = "Ingrese DNI";
-            this.textBox1.Size = new System.Drawing.Size(292, 27);
-            this.textBox1.TabIndex = 64;
+            this.inputDNI.BackColor = System.Drawing.Color.White;
+            this.inputDNI.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputDNI.ForeColor = System.Drawing.Color.Silver;
+            this.inputDNI.Location = new System.Drawing.Point(295, 85);
+            this.inputDNI.Name = "inputDNI";
+            this.inputDNI.PlaceholderText = "Ingrese DNI";
+            this.inputDNI.Size = new System.Drawing.Size(292, 27);
+            this.inputDNI.TabIndex = 64;
             // 
-            // textBox2
+            // inputNombre
             // 
-            this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.ForeColor = System.Drawing.Color.Silver;
-            this.textBox2.Location = new System.Drawing.Point(294, 164);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PlaceholderText = "Ingrese NOMBRE";
-            this.textBox2.Size = new System.Drawing.Size(292, 27);
-            this.textBox2.TabIndex = 65;
+            this.inputNombre.BackColor = System.Drawing.Color.White;
+            this.inputNombre.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputNombre.ForeColor = System.Drawing.Color.Silver;
+            this.inputNombre.Location = new System.Drawing.Point(295, 148);
+            this.inputNombre.Name = "inputNombre";
+            this.inputNombre.PlaceholderText = "Ingrese NOMBRE";
+            this.inputNombre.Size = new System.Drawing.Size(292, 27);
+            this.inputNombre.TabIndex = 65;
             // 
-            // textBox3
+            // inputApellido
             // 
-            this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.ForeColor = System.Drawing.Color.Silver;
-            this.textBox3.Location = new System.Drawing.Point(295, 232);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PlaceholderText = "Ingrese APELLIDO";
-            this.textBox3.Size = new System.Drawing.Size(292, 27);
-            this.textBox3.TabIndex = 66;
+            this.inputApellido.BackColor = System.Drawing.Color.White;
+            this.inputApellido.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputApellido.ForeColor = System.Drawing.Color.Silver;
+            this.inputApellido.Location = new System.Drawing.Point(295, 217);
+            this.inputApellido.Name = "inputApellido";
+            this.inputApellido.PlaceholderText = "Ingrese APELLIDO";
+            this.inputApellido.Size = new System.Drawing.Size(292, 27);
+            this.inputApellido.TabIndex = 66;
             // 
-            // textBox4
+            // inputSexo
             // 
-            this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.ForeColor = System.Drawing.Color.Silver;
-            this.textBox4.Location = new System.Drawing.Point(293, 302);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PlaceholderText = "Ingrese F= Femenino M=Masculino";
-            this.textBox4.Size = new System.Drawing.Size(292, 27);
-            this.textBox4.TabIndex = 67;
+            this.inputSexo.BackColor = System.Drawing.Color.White;
+            this.inputSexo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputSexo.ForeColor = System.Drawing.Color.Silver;
+            this.inputSexo.Location = new System.Drawing.Point(295, 284);
+            this.inputSexo.Name = "inputSexo";
+            this.inputSexo.PlaceholderText = "Ingrese F= Femenino M=Masculino";
+            this.inputSexo.Size = new System.Drawing.Size(292, 27);
+            this.inputSexo.TabIndex = 67;
             // 
-            // textBox5
+            // inputTlf
             // 
-            this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox5.ForeColor = System.Drawing.Color.Silver;
-            this.textBox5.Location = new System.Drawing.Point(294, 372);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.PlaceholderText = "Ej: 1135222048";
-            this.textBox5.Size = new System.Drawing.Size(292, 27);
-            this.textBox5.TabIndex = 68;
+            this.inputTlf.BackColor = System.Drawing.Color.White;
+            this.inputTlf.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputTlf.ForeColor = System.Drawing.Color.Silver;
+            this.inputTlf.Location = new System.Drawing.Point(295, 355);
+            this.inputTlf.Name = "inputTlf";
+            this.inputTlf.PlaceholderText = "Ej: 1135222048";
+            this.inputTlf.Size = new System.Drawing.Size(292, 27);
+            this.inputTlf.TabIndex = 68;
             // 
-            // textBox6
+            // inputMail
             // 
-            this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox6.ForeColor = System.Drawing.Color.Silver;
-            this.textBox6.Location = new System.Drawing.Point(291, 439);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.PlaceholderText = "Ejemplo@xxxx.com";
-            this.textBox6.Size = new System.Drawing.Size(292, 27);
-            this.textBox6.TabIndex = 69;
+            this.inputMail.BackColor = System.Drawing.Color.White;
+            this.inputMail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputMail.ForeColor = System.Drawing.Color.Silver;
+            this.inputMail.Location = new System.Drawing.Point(295, 425);
+            this.inputMail.Name = "inputMail";
+            this.inputMail.PlaceholderText = "Ejemplo@xxxx.com";
+            this.inputMail.Size = new System.Drawing.Size(292, 27);
+            this.inputMail.TabIndex = 69;
             // 
-            // textBox7
+            // inputDomicilio
             // 
-            this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox7.ForeColor = System.Drawing.Color.Silver;
-            this.textBox7.Location = new System.Drawing.Point(295, 506);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.PlaceholderText = "Calle Numero Dpto/Piso Localidad";
-            this.textBox7.Size = new System.Drawing.Size(292, 27);
-            this.textBox7.TabIndex = 70;
+            this.inputDomicilio.BackColor = System.Drawing.Color.White;
+            this.inputDomicilio.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputDomicilio.ForeColor = System.Drawing.Color.Silver;
+            this.inputDomicilio.Location = new System.Drawing.Point(295, 492);
+            this.inputDomicilio.Name = "inputDomicilio";
+            this.inputDomicilio.PlaceholderText = "Calle Numero Dpto/Piso Localidad";
+            this.inputDomicilio.Size = new System.Drawing.Size(292, 27);
+            this.inputDomicilio.TabIndex = 70;
             // 
-            // textBox8
+            // inputNacionalidad
             // 
-            this.textBox8.BackColor = System.Drawing.Color.White;
-            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox8.ForeColor = System.Drawing.Color.Silver;
-            this.textBox8.Location = new System.Drawing.Point(666, 105);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.PlaceholderText = "Ingrese Nacionalidad";
-            this.textBox8.Size = new System.Drawing.Size(292, 27);
-            this.textBox8.TabIndex = 71;
+            this.inputNacionalidad.BackColor = System.Drawing.Color.White;
+            this.inputNacionalidad.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputNacionalidad.ForeColor = System.Drawing.Color.Silver;
+            this.inputNacionalidad.Location = new System.Drawing.Point(666, 86);
+            this.inputNacionalidad.Name = "inputNacionalidad";
+            this.inputNacionalidad.PlaceholderText = "Ingrese Nacionalidad";
+            this.inputNacionalidad.Size = new System.Drawing.Size(292, 27);
+            this.inputNacionalidad.TabIndex = 71;
             // 
-            // textBox9
+            // inputFechaNac
             // 
-            this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox9.ForeColor = System.Drawing.Color.Silver;
-            this.textBox9.Location = new System.Drawing.Point(666, 164);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.PlaceholderText = "dd-mm-aaaa";
-            this.textBox9.Size = new System.Drawing.Size(292, 27);
-            this.textBox9.TabIndex = 72;
+            this.inputFechaNac.BackColor = System.Drawing.Color.White;
+            this.inputFechaNac.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputFechaNac.ForeColor = System.Drawing.Color.Silver;
+            this.inputFechaNac.Location = new System.Drawing.Point(666, 149);
+            this.inputFechaNac.Name = "inputFechaNac";
+            this.inputFechaNac.PlaceholderText = "dd-mm-aaaa";
+            this.inputFechaNac.Size = new System.Drawing.Size(292, 27);
+            this.inputFechaNac.TabIndex = 72;
             // 
-            // textBox10
+            // inputObraSocial
             // 
-            this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox10.ForeColor = System.Drawing.Color.Silver;
-            this.textBox10.Location = new System.Drawing.Point(675, 232);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.PlaceholderText = "Ingrese Obra social";
-            this.textBox10.Size = new System.Drawing.Size(292, 27);
-            this.textBox10.TabIndex = 73;
+            this.inputObraSocial.BackColor = System.Drawing.Color.White;
+            this.inputObraSocial.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputObraSocial.ForeColor = System.Drawing.Color.Silver;
+            this.inputObraSocial.Location = new System.Drawing.Point(666, 217);
+            this.inputObraSocial.Name = "inputObraSocial";
+            this.inputObraSocial.PlaceholderText = "Ingrese Obra social";
+            this.inputObraSocial.Size = new System.Drawing.Size(292, 27);
+            this.inputObraSocial.TabIndex = 73;
             // 
-            // textBox11
+            // inputCarnet
             // 
-            this.textBox11.BackColor = System.Drawing.Color.White;
-            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox11.ForeColor = System.Drawing.Color.Silver;
-            this.textBox11.Location = new System.Drawing.Point(666, 302);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.PlaceholderText = "Ingrese Numero de afiliado";
-            this.textBox11.Size = new System.Drawing.Size(292, 27);
-            this.textBox11.TabIndex = 74;
+            this.inputCarnet.BackColor = System.Drawing.Color.White;
+            this.inputCarnet.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputCarnet.ForeColor = System.Drawing.Color.Silver;
+            this.inputCarnet.Location = new System.Drawing.Point(666, 284);
+            this.inputCarnet.Name = "inputCarnet";
+            this.inputCarnet.PlaceholderText = "Ingrese Numero de afiliado";
+            this.inputCarnet.Size = new System.Drawing.Size(292, 27);
+            this.inputCarnet.TabIndex = 74;
             // 
             // RegistrarPaciente
             // 
@@ -595,45 +453,34 @@ namespace SANATORIO_HIPOCRATES
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ClientSize = new System.Drawing.Size(1116, 614);
-            this.Controls.Add(this.textBox11);
-            this.Controls.Add(this.textBox10);
-            this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.inputCarnet);
+            this.Controls.Add(this.inputObraSocial);
+            this.Controls.Add(this.inputFechaNac);
+            this.Controls.Add(this.inputNacionalidad);
+            this.Controls.Add(this.inputDomicilio);
+            this.Controls.Add(this.inputMail);
+            this.Controls.Add(this.inputTlf);
+            this.Controls.Add(this.inputSexo);
+            this.Controls.Add(this.inputApellido);
+            this.Controls.Add(this.inputNombre);
+            this.Controls.Add(this.inputDNI);
             this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
-            this.Controls.Add(this.inputSexo);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label14);
-            this.Controls.Add(this.inputCarnet);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.inputObraSocial);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.inputFechaNac);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.inputNacionalidad);
-            this.Controls.Add(this.inputDomicilio);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.inputMail);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.inputTlf);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.inputApellido);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.inputNombre);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.inputDNI);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button3);
@@ -660,43 +507,32 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox inputDNI;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox inputNombre;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox inputApellido;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox inputTlf;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox inputMail;
-        private System.Windows.Forms.TextBox inputDomicilio;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox inputNacionalidad;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox inputFechaNac;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox inputObraSocial;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox inputCarnet;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox inputSexo;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximizar;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox inputDNI;
+        private System.Windows.Forms.TextBox inputNombre;
+        private System.Windows.Forms.TextBox inputApellido;
+        private System.Windows.Forms.TextBox inputSexo;
+        private System.Windows.Forms.TextBox inputTlf;
+        private System.Windows.Forms.TextBox inputMail;
+        private System.Windows.Forms.TextBox inputDomicilio;
+        private System.Windows.Forms.TextBox inputNacionalidad;
+        private System.Windows.Forms.TextBox inputFechaNac;
+        private System.Windows.Forms.TextBox inputObraSocial;
+        private System.Windows.Forms.TextBox inputCarnet;
     }
 }
