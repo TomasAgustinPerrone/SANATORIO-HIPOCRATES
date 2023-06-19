@@ -15,9 +15,36 @@ namespace SANATORIO_HIPOCRATES
 {
     public partial class RegistrarPaciente : Form
     {
+        private bool mouseDown;
+        private Point lastLocation;
         public RegistrarPaciente()
         {
             InitializeComponent();
+            this.MouseDown += Form1_MouseDown;
+            this.MouseMove += Form1_MouseMove;
+            this.MouseUp += Form1_MouseUp;
+        }
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X,
+                    (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
         }
 
         private void label6_Click(object sender, EventArgs e)
@@ -129,7 +156,7 @@ namespace SANATORIO_HIPOCRATES
 
         private void btnCerrar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
         }
     }
 }
