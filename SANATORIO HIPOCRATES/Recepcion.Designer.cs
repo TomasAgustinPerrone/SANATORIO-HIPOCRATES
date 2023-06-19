@@ -109,6 +109,7 @@ namespace SANATORIO_HIPOCRATES
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
             this.button2.Location = new System.Drawing.Point(52, 574);
             this.button2.Name = "button2";
@@ -156,9 +157,10 @@ namespace SANATORIO_HIPOCRATES
             // label5
             // 
             this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label5.Location = new System.Drawing.Point(344, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(108, 15);
+            this.label5.Size = new System.Drawing.Size(127, 17);
             this.label5.TabIndex = 14;
             this.label5.Text = "Paciente registrado";
             this.label5.Click += new System.EventHandler(this.label5_Click);
@@ -166,21 +168,23 @@ namespace SANATORIO_HIPOCRATES
             // inputDNI
             // 
             this.inputDNI.BackColor = System.Drawing.Color.White;
+            this.inputDNI.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputDNI.ForeColor = System.Drawing.Color.Silver;
             this.inputDNI.Location = new System.Drawing.Point(339, 100);
             this.inputDNI.Name = "inputDNI";
             this.inputDNI.PlaceholderText = "Ingrese DNI";
-            this.inputDNI.Size = new System.Drawing.Size(292, 23);
+            this.inputDNI.Size = new System.Drawing.Size(292, 27);
             this.inputDNI.TabIndex = 6;
             this.inputDNI.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Location = new System.Drawing.Point(339, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 15);
+            this.label1.Size = new System.Drawing.Size(116, 20);
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar por DNI";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -213,6 +217,7 @@ namespace SANATORIO_HIPOCRATES
             this.buscarPacientePorDNI.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.buscarPacientePorDNI.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.buscarPacientePorDNI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarPacientePorDNI.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buscarPacientePorDNI.ForeColor = System.Drawing.SystemColors.Window;
             this.buscarPacientePorDNI.Location = new System.Drawing.Point(637, 97);
             this.buscarPacientePorDNI.Name = "buscarPacientePorDNI";
@@ -230,6 +235,7 @@ namespace SANATORIO_HIPOCRATES
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.SystemColors.Window;
             this.button5.Location = new System.Drawing.Point(896, 100);
             this.button5.Name = "button5";
@@ -266,21 +272,23 @@ namespace SANATORIO_HIPOCRATES
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label3.Location = new System.Drawing.Point(339, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 15);
+            this.label3.Size = new System.Drawing.Size(207, 20);
             this.label3.TabIndex = 28;
             this.label3.Text = "Buscar por NRO DE CARNET";
             // 
             // inputCarnet
             // 
             this.inputCarnet.BackColor = System.Drawing.Color.White;
+            this.inputCarnet.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputCarnet.ForeColor = System.Drawing.Color.Silver;
             this.inputCarnet.Location = new System.Drawing.Point(339, 151);
             this.inputCarnet.Name = "inputCarnet";
             this.inputCarnet.PlaceholderText = "Ingrese Carnet";
-            this.inputCarnet.Size = new System.Drawing.Size(292, 23);
+            this.inputCarnet.Size = new System.Drawing.Size(292, 27);
             this.inputCarnet.TabIndex = 29;
             this.inputCarnet.TextChanged += new System.EventHandler(this.inputCarnet_TextChanged);
             // 
@@ -292,6 +300,7 @@ namespace SANATORIO_HIPOCRATES
             this.buscarPacientePorCarnet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.buscarPacientePorCarnet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.buscarPacientePorCarnet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarPacientePorCarnet.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buscarPacientePorCarnet.ForeColor = System.Drawing.SystemColors.Window;
             this.buscarPacientePorCarnet.Location = new System.Drawing.Point(637, 148);
             this.buscarPacientePorCarnet.Name = "buscarPacientePorCarnet";
@@ -304,9 +313,10 @@ namespace SANATORIO_HIPOCRATES
             // label4
             // 
             this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(357, -1);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(95, 15);
+            this.label4.Size = new System.Drawing.Size(112, 17);
             this.label4.TabIndex = 15;
             this.label4.Text = "Lista de paciente";
             // 
@@ -339,6 +349,7 @@ namespace SANATORIO_HIPOCRATES
             this.refrescar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.refrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refrescar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.refrescar.ForeColor = System.Drawing.SystemColors.Window;
             this.refrescar.Location = new System.Drawing.Point(896, 298);
             this.refrescar.Name = "refrescar";
@@ -356,6 +367,7 @@ namespace SANATORIO_HIPOCRATES
             this.generarTurno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.generarTurno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.generarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generarTurno.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.generarTurno.ForeColor = System.Drawing.SystemColors.Window;
             this.generarTurno.Location = new System.Drawing.Point(547, 298);
             this.generarTurno.Name = "generarTurno";
@@ -413,6 +425,7 @@ namespace SANATORIO_HIPOCRATES
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.inputDNI);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Recepcion";
