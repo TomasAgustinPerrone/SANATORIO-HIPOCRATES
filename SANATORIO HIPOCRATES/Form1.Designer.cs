@@ -54,10 +54,11 @@ namespace SANATORIO_HIPOCRATES
             // txtContra
             // 
             this.txtContra.BackColor = System.Drawing.Color.White;
+            this.txtContra.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtContra.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.txtContra.Location = new System.Drawing.Point(432, 185);
             this.txtContra.Name = "txtContra";
-            this.txtContra.Size = new System.Drawing.Size(209, 23);
+            this.txtContra.Size = new System.Drawing.Size(209, 27);
             this.txtContra.TabIndex = 2;
             this.txtContra.Text = "Contraseña";
             this.txtContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -73,6 +74,7 @@ namespace SANATORIO_HIPOCRATES
             this.botonIngresar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.botonIngresar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.botonIngresar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.botonIngresar.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.botonIngresar.ForeColor = System.Drawing.SystemColors.Window;
             this.botonIngresar.Location = new System.Drawing.Point(432, 231);
             this.botonIngresar.Name = "botonIngresar";
@@ -86,11 +88,12 @@ namespace SANATORIO_HIPOCRATES
             this.txtLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.txtLogin.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtLogin.Cursor = System.Windows.Forms.Cursors.WaitCursor;
+            this.txtLogin.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtLogin.ForeColor = System.Drawing.SystemColors.Window;
             this.txtLogin.Location = new System.Drawing.Point(496, 107);
             this.txtLogin.Name = "txtLogin";
             this.txtLogin.ReadOnly = true;
-            this.txtLogin.Size = new System.Drawing.Size(76, 16);
+            this.txtLogin.Size = new System.Drawing.Size(76, 25);
             this.txtLogin.TabIndex = 0;
             this.txtLogin.Text = "Login";
             this.txtLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -99,10 +102,11 @@ namespace SANATORIO_HIPOCRATES
             // txtUser
             // 
             this.txtUser.BackColor = System.Drawing.Color.White;
+            this.txtUser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.txtUser.Location = new System.Drawing.Point(432, 137);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(209, 23);
+            this.txtUser.Size = new System.Drawing.Size(209, 27);
             this.txtUser.TabIndex = 1;
             this.txtUser.Text = "Usuario";
             this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -142,6 +146,7 @@ namespace SANATORIO_HIPOCRATES
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 400);
             this.Controls.Add(this.linkContra);
             this.Controls.Add(this.btnCerrar);
