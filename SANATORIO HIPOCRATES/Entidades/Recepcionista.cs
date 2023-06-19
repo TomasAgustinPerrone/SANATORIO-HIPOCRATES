@@ -18,7 +18,7 @@ namespace SANATORIO_HIPOCRATES.Entidades
         private long idRecepcionista;
         private Empleado empleado;
 
-        public void CrearPersona(string dni, string nombre, string apellido, char sexo, string telefono,
+        public void CrearPersona(long dni, string nombre, string apellido, char sexo, string telefono,
             string email, string domicilio, DateTime fechaNacimiento, string nacionalidad, string obraSocial, long nroCarnet)
         {
             PersonaService personaService = new PersonaService();

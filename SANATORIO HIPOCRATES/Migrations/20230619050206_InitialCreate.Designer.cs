@@ -9,8 +9,8 @@ using SANATORIO_HIPOCRATES.Config;
 namespace SANATORIO_HIPOCRATES.Migrations
 {
     [DbContext(typeof(Conexion))]
-    [Migration("20230618222446_Todalabase4")]
-    partial class Todalabase4
+    [Migration("20230619050206_InitialCreate")]
+    partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -48,7 +48,7 @@ namespace SANATORIO_HIPOCRATES.Migrations
                     b.ToTable("Empleados");
                 });
 
-            modelBuilder.Entity("SANATORIO_HIPOCRATES.Entidades.Medico", b =>
+            modelBuilder.Entity("SANATORIO_HIPOCRATES.Entidades.MedicoPersonal", b =>
                 {
                     b.Property<long>("IdMedico")
                         .ValueGeneratedOnAdd()
@@ -100,8 +100,8 @@ namespace SANATORIO_HIPOCRATES.Migrations
                     b.Property<string>("Apellido")
                         .HasColumnType("longtext");
 
-                    b.Property<string>("Dni")
-                        .HasColumnType("longtext");
+                    b.Property<long>("Dni")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Domicilio")
                         .HasColumnType("longtext");
@@ -177,11 +177,11 @@ namespace SANATORIO_HIPOCRATES.Migrations
                     b.Navigation("Persona");
                 });
 
-            modelBuilder.Entity("SANATORIO_HIPOCRATES.Entidades.Medico", b =>
+            modelBuilder.Entity("SANATORIO_HIPOCRATES.Entidades.MedicoPersonal", b =>
                 {
                     b.HasOne("SANATORIO_HIPOCRATES.Entidades.Empleado", "Empleado")
                         .WithOne()
-                        .HasForeignKey("SANATORIO_HIPOCRATES.Entidades.Medico", "IdEmpleado")
+                        .HasForeignKey("SANATORIO_HIPOCRATES.Entidades.MedicoPersonal", "IdEmpleado")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

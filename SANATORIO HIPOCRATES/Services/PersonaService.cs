@@ -43,7 +43,7 @@ namespace SANATORIO_HIPOCRATES.Services
             }
         }
 
-        public Persona BuscarPersonaEnDB(string dni)
+        public Persona BuscarPersonaEnDB(long dni)
         {
             using (var context = new Conexion(conexionConDB().Options))
             {
@@ -60,7 +60,7 @@ namespace SANATORIO_HIPOCRATES.Services
             }
         }
 
-        public Persona CrearPersona(string dni, string nombre, string apellido, char sexo, string telefono, 
+        public Persona CrearPersona(long dni, string nombre, string apellido, char sexo, string telefono, 
             string email, string domicilio, DateTime fechaNacimiento, string nacionalidad)
         {
 

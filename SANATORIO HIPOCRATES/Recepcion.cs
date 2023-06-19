@@ -77,7 +77,7 @@ namespace SANATORIO_HIPOCRATES
         private void button4_Click(object sender, EventArgs e)
         {
             PersonaService personaService = new PersonaService();
-            Persona persona = personaService.BuscarPersonaEnDB(inputDNI.Text);
+            Persona persona = personaService.BuscarPersonaEnDB(long.Parse(inputDNI.Text));
             PacienteService pacienteService = new PacienteService();
             Paciente paciente = pacienteService.BuscarPacienteByIdDePersona(persona.IdPersona);
 
@@ -192,6 +192,12 @@ namespace SANATORIO_HIPOCRATES
                     recepcionista.CrearTurno(idPaciente);
                 }
             }
+
+            TurnoService turnoService = new TurnoService();
+            List<Turno> turnos = turnoService.mostrarTodosLosTurnos();
+
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.DataSource = turnos;
         }
 
         private void inputCarnet_TextChanged(object sender, EventArgs e)
