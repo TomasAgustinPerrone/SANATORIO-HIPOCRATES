@@ -62,6 +62,7 @@ namespace SANATORIO_HIPOCRATES
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -146,7 +147,7 @@ namespace SANATORIO_HIPOCRATES
             this.inputDNI.BackColor = System.Drawing.Color.White;
             this.inputDNI.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputDNI.ForeColor = System.Drawing.Color.Silver;
-            this.inputDNI.Location = new System.Drawing.Point(294, 85);
+            this.inputDNI.Location = new System.Drawing.Point(291, 86);
             this.inputDNI.Name = "inputDNI";
             this.inputDNI.PlaceholderText = "Ingrese DNI";
             this.inputDNI.Size = new System.Drawing.Size(292, 27);
@@ -457,12 +458,24 @@ namespace SANATORIO_HIPOCRATES
             this.btnMaximizar.TabStop = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox1.ForeColor = System.Drawing.Color.Silver;
+            this.textBox1.Location = new System.Drawing.Point(291, 105);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.PlaceholderText = "Ingrese DNI";
+            this.textBox1.Size = new System.Drawing.Size(292, 27);
+            this.textBox1.TabIndex = 64;
+            // 
             // RegistrarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ClientSize = new System.Drawing.Size(1116, 614);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
@@ -544,5 +557,6 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximizar;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
