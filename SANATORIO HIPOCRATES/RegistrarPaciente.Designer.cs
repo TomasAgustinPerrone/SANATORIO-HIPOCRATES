@@ -523,6 +523,7 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximizar;
+        //inputs ordenados 
         private System.Windows.Forms.TextBox inputDNI;
         private System.Windows.Forms.TextBox inputNombre;
         private System.Windows.Forms.TextBox inputApellido;
