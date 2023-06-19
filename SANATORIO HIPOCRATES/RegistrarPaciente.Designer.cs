@@ -78,7 +78,6 @@ namespace SANATORIO_HIPOCRATES
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.ForeColor = System.Drawing.SystemColors.Window;
             this.button3.Location = new System.Drawing.Point(862, 531);
             this.button3.Name = "button3";
@@ -95,7 +94,6 @@ namespace SANATORIO_HIPOCRATES
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
             this.button1.Location = new System.Drawing.Point(862, 455);
             this.button1.Name = "button1";
@@ -117,7 +115,6 @@ namespace SANATORIO_HIPOCRATES
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift Light", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(291, 9);
             this.label6.Name = "label6";
@@ -129,7 +126,6 @@ namespace SANATORIO_HIPOCRATES
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Transparent;
             this.label1.Location = new System.Drawing.Point(294, 63);
             this.label1.Name = "label1";
@@ -140,7 +136,6 @@ namespace SANATORIO_HIPOCRATES
             // txtUser
             // 
             this.txtUser.BackColor = System.Drawing.Color.White;
-            this.txtUser.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtUser.ForeColor = System.Drawing.Color.Silver;
             this.txtUser.Location = new System.Drawing.Point(294, 85);
             this.txtUser.Name = "txtUser";
@@ -151,7 +146,6 @@ namespace SANATORIO_HIPOCRATES
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Transparent;
             this.label2.Location = new System.Drawing.Point(294, 126);
             this.label2.Name = "label2";
@@ -162,7 +156,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox1.ForeColor = System.Drawing.Color.Silver;
             this.textBox1.Location = new System.Drawing.Point(294, 148);
             this.textBox1.Name = "textBox1";
@@ -173,7 +166,6 @@ namespace SANATORIO_HIPOCRATES
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(294, 194);
             this.label3.Name = "label3";
@@ -184,7 +176,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.White;
-            this.textBox2.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox2.ForeColor = System.Drawing.Color.Silver;
             this.textBox2.Location = new System.Drawing.Point(294, 216);
             this.textBox2.Name = "textBox2";
@@ -195,7 +186,6 @@ namespace SANATORIO_HIPOCRATES
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(294, 262);
             this.label4.Name = "label4";
@@ -206,7 +196,6 @@ namespace SANATORIO_HIPOCRATES
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label5.ForeColor = System.Drawing.Color.Transparent;
             this.label5.Location = new System.Drawing.Point(293, 332);
             this.label5.Name = "label5";
@@ -217,7 +206,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox3
             // 
             this.textBox3.BackColor = System.Drawing.Color.White;
-            this.textBox3.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox3.ForeColor = System.Drawing.Color.Silver;
             this.textBox3.Location = new System.Drawing.Point(293, 354);
             this.textBox3.Name = "textBox3";
@@ -228,7 +216,6 @@ namespace SANATORIO_HIPOCRATES
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label7.ForeColor = System.Drawing.Color.Transparent;
             this.label7.Location = new System.Drawing.Point(291, 402);
             this.label7.Name = "label7";
@@ -239,7 +226,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox4
             // 
             this.textBox4.BackColor = System.Drawing.Color.White;
-            this.textBox4.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox4.ForeColor = System.Drawing.Color.Silver;
             this.textBox4.Location = new System.Drawing.Point(293, 424);
             this.textBox4.Name = "textBox4";
@@ -250,7 +236,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox5
             // 
             this.textBox5.BackColor = System.Drawing.Color.White;
-            this.textBox5.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox5.ForeColor = System.Drawing.Color.Silver;
             this.textBox5.Location = new System.Drawing.Point(295, 491);
             this.textBox5.Name = "textBox5";
@@ -261,7 +246,6 @@ namespace SANATORIO_HIPOCRATES
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label8.ForeColor = System.Drawing.Color.Transparent;
             this.label8.Location = new System.Drawing.Point(293, 469);
             this.label8.Name = "label8";
@@ -272,7 +256,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox6
             // 
             this.textBox6.BackColor = System.Drawing.Color.White;
-            this.textBox6.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox6.ForeColor = System.Drawing.Color.Silver;
             this.textBox6.Location = new System.Drawing.Point(297, 561);
             this.textBox6.Name = "textBox6";
@@ -283,7 +266,6 @@ namespace SANATORIO_HIPOCRATES
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label9.ForeColor = System.Drawing.Color.Transparent;
             this.label9.Location = new System.Drawing.Point(295, 539);
             this.label9.Name = "label9";
@@ -294,7 +276,6 @@ namespace SANATORIO_HIPOCRATES
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label10.ForeColor = System.Drawing.Color.Transparent;
             this.label10.Location = new System.Drawing.Point(666, 63);
             this.label10.Name = "label10";
@@ -305,7 +286,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox7
             // 
             this.textBox7.BackColor = System.Drawing.Color.White;
-            this.textBox7.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox7.ForeColor = System.Drawing.Color.Silver;
             this.textBox7.Location = new System.Drawing.Point(666, 85);
             this.textBox7.Name = "textBox7";
@@ -316,7 +296,6 @@ namespace SANATORIO_HIPOCRATES
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label11.ForeColor = System.Drawing.Color.Transparent;
             this.label11.Location = new System.Drawing.Point(666, 126);
             this.label11.Name = "label11";
@@ -327,7 +306,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox8
             // 
             this.textBox8.BackColor = System.Drawing.Color.White;
-            this.textBox8.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox8.ForeColor = System.Drawing.Color.Silver;
             this.textBox8.Location = new System.Drawing.Point(666, 148);
             this.textBox8.Name = "textBox8";
@@ -338,7 +316,6 @@ namespace SANATORIO_HIPOCRATES
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label13.ForeColor = System.Drawing.Color.Transparent;
             this.label13.Location = new System.Drawing.Point(666, 194);
             this.label13.Name = "label13";
@@ -349,7 +326,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox10
             // 
             this.textBox10.BackColor = System.Drawing.Color.White;
-            this.textBox10.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox10.ForeColor = System.Drawing.Color.Silver;
             this.textBox10.Location = new System.Drawing.Point(666, 216);
             this.textBox10.Name = "textBox10";
@@ -360,7 +336,6 @@ namespace SANATORIO_HIPOCRATES
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label14.ForeColor = System.Drawing.Color.Transparent;
             this.label14.Location = new System.Drawing.Point(666, 262);
             this.label14.Name = "label14";
@@ -371,7 +346,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox11
             // 
             this.textBox11.BackColor = System.Drawing.Color.White;
-            this.textBox11.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox11.ForeColor = System.Drawing.Color.Silver;
             this.textBox11.Location = new System.Drawing.Point(666, 284);
             this.textBox11.Name = "textBox11";
@@ -387,7 +361,6 @@ namespace SANATORIO_HIPOCRATES
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
             this.button2.Location = new System.Drawing.Point(43, 572);
             this.button2.Name = "button2";
@@ -440,7 +413,6 @@ namespace SANATORIO_HIPOCRATES
             // textBox9
             // 
             this.textBox9.BackColor = System.Drawing.Color.White;
-            this.textBox9.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.textBox9.ForeColor = System.Drawing.Color.Silver;
             this.textBox9.Location = new System.Drawing.Point(293, 284);
             this.textBox9.Name = "textBox9";

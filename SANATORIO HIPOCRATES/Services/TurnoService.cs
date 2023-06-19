@@ -42,7 +42,7 @@ namespace SANATORIO_HIPOCRATES.Services
         }
 
 
-        public Turno CrearTurnoEnDB(Paciente paciente)
+        public Turno CrearTurnoEnDB(long idPaciente)
         {
 
             using (var context = new Conexion(conexionConDB().Options))
@@ -50,8 +50,8 @@ namespace SANATORIO_HIPOCRATES.Services
 
                 try
                 {
-                    MessageBox.Show($"Verificando la existencia de un turno ya creado para el id de paciente: {paciente.IdPaciente}");
-                    var turnoExistente = BuscarTurnoEnDB(paciente.IdPaciente);
+                    MessageBox.Show($"Verificando la existencia de un turno ya creado para el id de paciente: {idPaciente}");
+                    var turnoExistente = BuscarTurnoEnDB(idPaciente);
                     MessageBox.Show($"Ya existe un turno para este paciente");
                     return turnoExistente;
                 }
@@ -61,7 +61,7 @@ namespace SANATORIO_HIPOCRATES.Services
                     var nuevoTurno = new Turno
                     {
                         FechaCreacion = DateTime.Now,
-                        IdPaciente = paciente.IdPaciente
+                        IdPaciente = idPaciente
                     };
 
                     context.Turnos.Add(nuevoTurno);

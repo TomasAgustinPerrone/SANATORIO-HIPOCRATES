@@ -26,6 +26,24 @@ namespace SANATORIO_HIPOCRATES.Services
             return optionsBuilder;
         }
 
+
+        public Paciente BuscarPacienteByIdDePersona(long idPersona)
+        {
+            using (var context = new Conexion(conexionConDB().Options))
+            {
+                var pacienteExistente = context.Pacientes.FirstOrDefault(p => p.IdPersona == idPersona);
+
+                if (pacienteExistente != null)
+                {
+                    return pacienteExistente;
+                }
+                else
+                {
+                    throw new ElementoNoEncontrado("No existe un paciente registrado con el id: " + idPersona);
+                }
+            }
+        }
+
         public Paciente BuscarPacienteEnDB(long nroCarnet)
         {
             using (var context = new Conexion(conexionConDB().Options))

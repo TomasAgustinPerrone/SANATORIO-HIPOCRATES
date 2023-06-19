@@ -32,33 +32,38 @@ namespace SANATORIO_HIPOCRATES
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Recepcion));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.dataGridPacientes = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.txtUser = new System.Windows.Forms.TextBox();
+            this.inputDNI = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.buscarPacientePorDNI = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
+            this.inputCarnet = new System.Windows.Forms.TextBox();
+            this.buscarPacientePorCarnet = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.refrescar = new System.Windows.Forms.Button();
+            this.generarTurno = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -84,6 +89,14 @@ namespace SANATORIO_HIPOCRATES
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(4, 390);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(246, 172);
+            this.panel5.TabIndex = 22;
+            // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
@@ -92,7 +105,6 @@ namespace SANATORIO_HIPOCRATES
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2.ForeColor = System.Drawing.SystemColors.Window;
             this.button2.Location = new System.Drawing.Point(52, 574);
             this.button2.Name = "button2";
@@ -108,46 +120,63 @@ namespace SANATORIO_HIPOCRATES
             this.panel3.Size = new System.Drawing.Size(851, 205);
             this.panel3.TabIndex = 0;
             // 
+            // monthCalendar1
+            // 
+            this.monthCalendar1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.monthCalendar1.Location = new System.Drawing.Point(3, 219);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 21;
+            this.monthCalendar1.TitleBackColor = System.Drawing.SystemColors.ControlDark;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.dataGridPacientes);
             this.panel2.Controls.Add(this.label5);
             this.panel2.Location = new System.Drawing.Point(255, 204);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(848, 88);
             this.panel2.TabIndex = 5;
             // 
+            // dataGridPacientes
+            // 
+            this.dataGridPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridPacientes.Location = new System.Drawing.Point(-1, 18);
+            this.dataGridPacientes.Name = "dataGridPacientes";
+            this.dataGridPacientes.RowTemplate.Height = 25;
+            this.dataGridPacientes.Size = new System.Drawing.Size(848, 69);
+            this.dataGridPacientes.TabIndex = 15;
+            this.dataGridPacientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPacientes_CellContentClick);
+            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label5.Location = new System.Drawing.Point(331, -1);
+            this.label5.Location = new System.Drawing.Point(342, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(152, 19);
+            this.label5.Size = new System.Drawing.Size(108, 15);
             this.label5.TabIndex = 14;
             this.label5.Text = "Paciente registrado";
             this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
-            // txtUser
+            // inputDNI
             // 
-            this.txtUser.BackColor = System.Drawing.Color.White;
-            this.txtUser.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtUser.ForeColor = System.Drawing.Color.Silver;
-            this.txtUser.Location = new System.Drawing.Point(339, 100);
-            this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(292, 28);
-            this.txtUser.TabIndex = 6;
-            this.txtUser.Text = "Ingrese DNI";
+            this.inputDNI.BackColor = System.Drawing.Color.White;
+            this.inputDNI.ForeColor = System.Drawing.Color.Silver;
+            this.inputDNI.Location = new System.Drawing.Point(339, 100);
+            this.inputDNI.Name = "inputDNI";
+            this.inputDNI.Size = new System.Drawing.Size(292, 23);
+            this.inputDNI.TabIndex = 6;
+            this.inputDNI.Text = "Ingrese DNI";
+            this.inputDNI.TextChanged += new System.EventHandler(this.txtUser_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label1.Location = new System.Drawing.Point(339, 78);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 19);
+            this.label1.Size = new System.Drawing.Size(86, 15);
             this.label1.TabIndex = 11;
             this.label1.Text = "Buscar por DNI";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -172,22 +201,22 @@ namespace SANATORIO_HIPOCRATES
             this.pictureBox4.TabIndex = 18;
             this.pictureBox4.TabStop = false;
             // 
-            // button4
+            // buscarPacientePorDNI
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button4.ForeColor = System.Drawing.SystemColors.Window;
-            this.button4.Location = new System.Drawing.Point(637, 100);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(148, 30);
-            this.button4.TabIndex = 19;
-            this.button4.Text = "Buscar paciente";
-            this.button4.UseVisualStyleBackColor = false;
+            this.buscarPacientePorDNI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buscarPacientePorDNI.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buscarPacientePorDNI.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buscarPacientePorDNI.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.buscarPacientePorDNI.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.buscarPacientePorDNI.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarPacientePorDNI.ForeColor = System.Drawing.SystemColors.Window;
+            this.buscarPacientePorDNI.Location = new System.Drawing.Point(637, 97);
+            this.buscarPacientePorDNI.Name = "buscarPacientePorDNI";
+            this.buscarPacientePorDNI.Size = new System.Drawing.Size(148, 30);
+            this.buscarPacientePorDNI.TabIndex = 19;
+            this.buscarPacientePorDNI.Text = "Buscar paciente";
+            this.buscarPacientePorDNI.UseVisualStyleBackColor = false;
+            this.buscarPacientePorDNI.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -197,7 +226,6 @@ namespace SANATORIO_HIPOCRATES
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button5.ForeColor = System.Drawing.SystemColors.Window;
             this.button5.Location = new System.Drawing.Point(896, 100);
             this.button5.Name = "button5";
@@ -205,14 +233,6 @@ namespace SANATORIO_HIPOCRATES
             this.button5.TabIndex = 20;
             this.button5.Text = "Registrar paciente";
             this.button5.UseVisualStyleBackColor = false;
-            // 
-            // monthCalendar1
-            // 
-            this.monthCalendar1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.monthCalendar1.Location = new System.Drawing.Point(3, 219);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 21;
-            this.monthCalendar1.TitleBackColor = System.Drawing.SystemColors.ControlDark;
             // 
             // btnCerrar
             // 
@@ -228,11 +248,10 @@ namespace SANATORIO_HIPOCRATES
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Bahnschrift Light", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label6.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label6.Location = new System.Drawing.Point(255, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(432, 41);
+            this.label6.Size = new System.Drawing.Size(148, 15);
             this.label6.TabIndex = 23;
             this.label6.Text = "RECEPCION DE PACIENTES";
             this.label6.Click += new System.EventHandler(this.label6_Click);
@@ -240,57 +259,46 @@ namespace SANATORIO_HIPOCRATES
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.label3.Location = new System.Drawing.Point(339, 131);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(212, 19);
+            this.label3.Size = new System.Drawing.Size(155, 15);
             this.label3.TabIndex = 28;
             this.label3.Text = "Buscar por NRO DE CARNET";
             // 
-            // textBox1
+            // inputCarnet
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.Silver;
-            this.textBox1.Location = new System.Drawing.Point(339, 151);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(292, 28);
-            this.textBox1.TabIndex = 29;
-            this.textBox1.Text = "Ingrese ID";
+            this.inputCarnet.BackColor = System.Drawing.Color.White;
+            this.inputCarnet.ForeColor = System.Drawing.Color.Silver;
+            this.inputCarnet.Location = new System.Drawing.Point(339, 151);
+            this.inputCarnet.Name = "inputCarnet";
+            this.inputCarnet.Size = new System.Drawing.Size(292, 23);
+            this.inputCarnet.TabIndex = 29;
+            this.inputCarnet.Text = "Ingrese ID";
             // 
-            // panel5
+            // buscarPacientePorCarnet
             // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(4, 390);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(246, 172);
-            this.panel5.TabIndex = 22;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(637, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(148, 30);
-            this.button1.TabIndex = 30;
-            this.button1.Text = "Buscar paciente";
-            this.button1.UseVisualStyleBackColor = false;
+            this.buscarPacientePorCarnet.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.buscarPacientePorCarnet.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buscarPacientePorCarnet.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.buscarPacientePorCarnet.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.buscarPacientePorCarnet.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.buscarPacientePorCarnet.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buscarPacientePorCarnet.ForeColor = System.Drawing.SystemColors.Window;
+            this.buscarPacientePorCarnet.Location = new System.Drawing.Point(637, 148);
+            this.buscarPacientePorCarnet.Name = "buscarPacientePorCarnet";
+            this.buscarPacientePorCarnet.Size = new System.Drawing.Size(148, 30);
+            this.buscarPacientePorCarnet.TabIndex = 30;
+            this.buscarPacientePorCarnet.Text = "Buscar paciente";
+            this.buscarPacientePorCarnet.UseVisualStyleBackColor = false;
+            this.buscarPacientePorCarnet.Click += new System.EventHandler(this.buscarPacientePorCarnet_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Bahnschrift Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label4.Location = new System.Drawing.Point(342, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(132, 19);
+            this.label4.Size = new System.Drawing.Size(95, 15);
             this.label4.TabIndex = 15;
             this.label4.Text = "Lista de paciente";
             // 
@@ -298,29 +306,56 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.dataGridView1);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Location = new System.Drawing.Point(255, 332);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(848, 271);
             this.panel4.TabIndex = 14;
             // 
-            // button3
+            // dataGridView1
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bahnschrift Light", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.SystemColors.Window;
-            this.button3.Location = new System.Drawing.Point(567, 298);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(207, 28);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Generar turno";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(-1, 18);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(848, 252);
+            this.dataGridView1.TabIndex = 17;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // refrescar
+            // 
+            this.refrescar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.refrescar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.refrescar.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.refrescar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.refrescar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.refrescar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refrescar.ForeColor = System.Drawing.SystemColors.Window;
+            this.refrescar.Location = new System.Drawing.Point(896, 298);
+            this.refrescar.Name = "refrescar";
+            this.refrescar.Size = new System.Drawing.Size(207, 28);
+            this.refrescar.TabIndex = 31;
+            this.refrescar.Text = "Refrescar";
+            this.refrescar.UseVisualStyleBackColor = false;
+            this.refrescar.Click += new System.EventHandler(this.refrescar_Click);
+            // 
+            // generarTurno
+            // 
+            this.generarTurno.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.generarTurno.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.generarTurno.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.generarTurno.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.generarTurno.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.generarTurno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.generarTurno.ForeColor = System.Drawing.SystemColors.Window;
+            this.generarTurno.Location = new System.Drawing.Point(547, 298);
+            this.generarTurno.Name = "generarTurno";
+            this.generarTurno.Size = new System.Drawing.Size(207, 28);
+            this.generarTurno.TabIndex = 33;
+            this.generarTurno.Text = "Generar turno";
+            this.generarTurno.UseVisualStyleBackColor = false;
+            this.generarTurno.Click += new System.EventHandler(this.generarTurno_Click);
             // 
             // Recepcion
             // 
@@ -328,20 +363,21 @@ namespace SANATORIO_HIPOCRATES
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1108, 615);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.generarTurno);
+            this.Controls.Add(this.refrescar);
+            this.Controls.Add(this.buscarPacientePorCarnet);
+            this.Controls.Add(this.inputCarnet);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.buscarPacientePorDNI);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.txtUser);
+            this.Controls.Add(this.inputDNI);
             this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.SystemColors.HotTrack;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -351,11 +387,13 @@ namespace SANATORIO_HIPOCRATES
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridPacientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -365,13 +403,13 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox txtUser;
+        private System.Windows.Forms.TextBox inputDNI;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button buscarPacientePorDNI;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.MonthCalendar monthCalendar1;
         private System.Windows.Forms.Label label5;
@@ -379,10 +417,13 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox inputCarnet;
+        private System.Windows.Forms.Button buscarPacientePorCarnet;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button refrescar;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridPacientes;
+        private System.Windows.Forms.Button generarTurno;
     }
 }

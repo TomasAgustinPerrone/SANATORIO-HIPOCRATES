@@ -18,10 +18,9 @@ namespace SANATORIO_HIPOCRATES.Entidades
         private long idRecepcionista;
         private Empleado empleado;
 
-        public void CrearTurno(string dni, string nombre, string apellido, char sexo, string telefono,
+        public void CrearPersona(string dni, string nombre, string apellido, char sexo, string telefono,
             string email, string domicilio, DateTime fechaNacimiento, string nacionalidad, string obraSocial, long nroCarnet)
         {
-
             PersonaService personaService = new PersonaService();
             Persona personaNueva = personaService.CrearPersona(dni, nombre, apellido, sexo, telefono,
                                     email, domicilio, fechaNacimiento, nacionalidad);
@@ -29,10 +28,14 @@ namespace SANATORIO_HIPOCRATES.Entidades
             PacienteService pacienteService = new PacienteService();
             Paciente pacienteNuevo = pacienteService.CrearPaciente(obraSocial, nroCarnet, personaNueva);
             MessageBox.Show($"El paciente {nombre} {apellido}, DNI: {dni} y nro carnet: {nroCarnet} solicita un turno.");
+        }
+
+        public void CrearTurno(long idPaciente)
+        {
 
             TurnoService turnoService = new TurnoService();
-            Turno turnoNuevo = turnoService.CrearTurnoEnDB(pacienteNuevo);
-            MessageBox.Show($"Informe al paciente {nombre} {apellido} que aguarde a ser llamado. " +
+            Turno turnoNuevo = turnoService.CrearTurnoEnDB(idPaciente);
+            MessageBox.Show($"Informe al paciente que aguarde a ser llamado. " +
                 $"\nSu turno es el nro {turnoNuevo.IdTurno}");
         }
 

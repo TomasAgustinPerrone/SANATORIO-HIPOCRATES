@@ -21,7 +21,7 @@ namespace SANATORIO_HIPOCRATES.Config
 
         public DbSet<Persona> Personas { get; set; }
         public DbSet<Paciente> Pacientes { get; set; }
-        public DbSet<Medico> Medicos { get; set; }
+        public DbSet<MedicoPersonal> Medicos { get; set; }
         public DbSet<Empleado> Empleados { get; set; }
         public DbSet<Recepcionista> Recepcionistas { get; set; }
         public DbSet<Turno> Turnos { get; set; }
@@ -45,10 +45,10 @@ namespace SANATORIO_HIPOCRATES.Config
                 .WithOne()
                 .HasForeignKey<Recepcionista>(b => b.IdEmpleado);
 
-            modelBuilder.Entity<Medico>()
+            modelBuilder.Entity<MedicoPersonal>()
                 .HasOne(p => p.Empleado)
                 .WithOne()
-                .HasForeignKey<Medico>(b => b.IdEmpleado);
+                .HasForeignKey<MedicoPersonal>(b => b.IdEmpleado);
 
 
         }
