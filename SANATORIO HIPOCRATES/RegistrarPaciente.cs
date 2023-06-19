@@ -116,7 +116,6 @@ namespace SANATORIO_HIPOCRATES
             }
 
 
-
             recepcionista.CrearPersona(dni, nombre, apellido, sexo, telefono, email, domicilio, fecha, nacionalidad, obraSocial, numeroCarnet);
         }
 
