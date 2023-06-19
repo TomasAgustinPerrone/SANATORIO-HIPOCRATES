@@ -214,7 +214,7 @@ namespace SANATORIO_HIPOCRATES
             this.buscarPacientePorDNI.Name = "buscarPacientePorDNI";
             this.buscarPacientePorDNI.Size = new System.Drawing.Size(148, 30);
             this.buscarPacientePorDNI.TabIndex = 19;
-            this.buscarPacientePorDNI.Text = "Buscar paciente";
+            this.buscarPacientePorDNI.Text = "Buscar por DNI";
             this.buscarPacientePorDNI.UseVisualStyleBackColor = false;
             this.buscarPacientePorDNI.Click += new System.EventHandler(this.button4_Click);
             // 
@@ -233,6 +233,7 @@ namespace SANATORIO_HIPOCRATES
             this.button5.TabIndex = 20;
             this.button5.Text = "Registrar paciente";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // btnCerrar
             // 
@@ -274,7 +275,8 @@ namespace SANATORIO_HIPOCRATES
             this.inputCarnet.Name = "inputCarnet";
             this.inputCarnet.Size = new System.Drawing.Size(292, 23);
             this.inputCarnet.TabIndex = 29;
-            this.inputCarnet.Text = "Ingrese ID";
+            this.inputCarnet.Text = "Ingrese Carnet";
+            this.inputCarnet.TextChanged += new System.EventHandler(this.inputCarnet_TextChanged);
             // 
             // buscarPacientePorCarnet
             // 
@@ -289,7 +291,7 @@ namespace SANATORIO_HIPOCRATES
             this.buscarPacientePorCarnet.Name = "buscarPacientePorCarnet";
             this.buscarPacientePorCarnet.Size = new System.Drawing.Size(148, 30);
             this.buscarPacientePorCarnet.TabIndex = 30;
-            this.buscarPacientePorCarnet.Text = "Buscar paciente";
+            this.buscarPacientePorCarnet.Text = "Buscar por Carnet";
             this.buscarPacientePorCarnet.UseVisualStyleBackColor = false;
             this.buscarPacientePorCarnet.Click += new System.EventHandler(this.buscarPacientePorCarnet_Click);
             // 

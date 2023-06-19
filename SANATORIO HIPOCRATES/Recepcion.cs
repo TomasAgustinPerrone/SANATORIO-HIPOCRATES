@@ -117,6 +117,38 @@ namespace SANATORIO_HIPOCRATES
         private void buscarPacientePorCarnet_Click(object sender, EventArgs e)
         {
 
+            PacienteService pacienteService = new PacienteService();
+            Paciente paciente = pacienteService.BuscarPacienteEnDB(long.Parse(inputCarnet.Text) ); 
+
+            PersonaService personaService = new PersonaService();
+            Persona persona = personaService.BuscarPersonaById(paciente.IdPersona);
+
+
+            // Crear un objeto anónimo que contenga la información de ambas entidades
+            var result = new
+            {
+                // Propiedades de Persona
+                IdPersona = persona.IdPersona,
+                Nombre = persona.Nombre,
+                Apellido = persona.Apellido,
+                Domicilio = persona.Domicilio,
+                Dni = persona.Dni,
+                Sexo = persona.Sexo,
+                Telefono = persona.Telefono,
+                Email = persona.Email,
+                Nacionalidad = persona.Nacionalidad,
+                FechaNac = persona.FechaNacimiento,
+
+                IdPaciente = paciente.IdPaciente,
+                ObraSocial = paciente.ObraSocial,
+                NroCarnet = paciente.NumeroCarnet
+            };
+
+            // Agregar el objeto anónimo a una lista
+            var resultList = new List<object> { result };
+
+            dataGridPacientes.AutoGenerateColumns = true;
+            dataGridPacientes.DataSource = resultList;
         }
 
         private void txtUser_TextChanged(object sender, EventArgs e)
@@ -161,5 +193,15 @@ namespace SANATORIO_HIPOCRATES
             }
         }
 
+        private void inputCarnet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            RegistrarPaciente registrarPaciente = new RegistrarPaciente();
+            registrarPaciente.Show();
+        }
     }
 }

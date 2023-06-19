@@ -26,6 +26,22 @@ namespace SANATORIO_HIPOCRATES.Services
             return optionsBuilder;
         }
 
+        public Persona BuscarPersonaById(long idPersona)
+        {
+            using (var context = new Conexion(conexionConDB().Options))
+            {
+                var personaExistente = context.Personas.FirstOrDefault(p => p.IdPersona == idPersona);
+
+                if (personaExistente != null)
+                {
+                    return personaExistente;
+                }
+                else
+                {
+                    throw new ElementoNoEncontrado("No existe una persona registrada con el dni: " + idPersona);
+                }
+            }
+        }
 
         public Persona BuscarPersonaEnDB(string dni)
         {
