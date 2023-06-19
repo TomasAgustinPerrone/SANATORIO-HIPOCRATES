@@ -329,22 +329,24 @@ namespace SANATORIO_HIPOCRATES
             // inputDNI
             // 
             this.inputDNI.BackColor = System.Drawing.Color.White;
-            this.inputDNI.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputDNI.ForeColor = System.Drawing.Color.Silver;
+            this.inputDNI.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputDNI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.inputDNI.Location = new System.Drawing.Point(295, 85);
             this.inputDNI.Name = "inputDNI";
             this.inputDNI.PlaceholderText = "Ingrese DNI";
             this.inputDNI.Size = new System.Drawing.Size(292, 27);
             this.inputDNI.TabIndex = 64;
+            this.inputDNI.TextChanged += new System.EventHandler(this.inputDNI_TextChanged);
             // 
             // inputNombre
             // 
             this.inputNombre.BackColor = System.Drawing.Color.White;
             this.inputNombre.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputNombre.ForeColor = System.Drawing.Color.Silver;
+            this.inputNombre.ForeColor = System.Drawing.Color.Black;
             this.inputNombre.Location = new System.Drawing.Point(295, 148);
             this.inputNombre.Name = "inputNombre";
             this.inputNombre.PlaceholderText = "Ingrese NOMBRE";
+            this.inputNombre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.inputNombre.Size = new System.Drawing.Size(292, 27);
             this.inputNombre.TabIndex = 65;
             // 
@@ -352,7 +354,7 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.inputApellido.BackColor = System.Drawing.Color.White;
             this.inputApellido.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputApellido.ForeColor = System.Drawing.Color.Silver;
+            this.inputApellido.ForeColor = System.Drawing.Color.Black;
             this.inputApellido.Location = new System.Drawing.Point(295, 217);
             this.inputApellido.Name = "inputApellido";
             this.inputApellido.PlaceholderText = "Ingrese APELLIDO";
@@ -363,7 +365,7 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.inputSexo.BackColor = System.Drawing.Color.White;
             this.inputSexo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputSexo.ForeColor = System.Drawing.Color.Silver;
+            this.inputSexo.ForeColor = System.Drawing.Color.Black;
             this.inputSexo.Location = new System.Drawing.Point(295, 284);
             this.inputSexo.Name = "inputSexo";
             this.inputSexo.PlaceholderText = "Ingrese F= Femenino M=Masculino";
@@ -374,7 +376,7 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.inputTlf.BackColor = System.Drawing.Color.White;
             this.inputTlf.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputTlf.ForeColor = System.Drawing.Color.Silver;
+            this.inputTlf.ForeColor = System.Drawing.Color.Black;
             this.inputTlf.Location = new System.Drawing.Point(295, 355);
             this.inputTlf.Name = "inputTlf";
             this.inputTlf.PlaceholderText = "Ej: 1135222048";
@@ -385,7 +387,7 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.inputMail.BackColor = System.Drawing.Color.White;
             this.inputMail.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputMail.ForeColor = System.Drawing.Color.Silver;
+            this.inputMail.ForeColor = System.Drawing.Color.Black;
             this.inputMail.Location = new System.Drawing.Point(295, 425);
             this.inputMail.Name = "inputMail";
             this.inputMail.PlaceholderText = "Ejemplo@xxxx.com";
@@ -396,7 +398,7 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.inputDomicilio.BackColor = System.Drawing.Color.White;
             this.inputDomicilio.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputDomicilio.ForeColor = System.Drawing.Color.Silver;
+            this.inputDomicilio.ForeColor = System.Drawing.Color.Black;
             this.inputDomicilio.Location = new System.Drawing.Point(295, 492);
             this.inputDomicilio.Name = "inputDomicilio";
             this.inputDomicilio.PlaceholderText = "Calle Numero Dpto/Piso Localidad";
@@ -407,7 +409,7 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.inputNacionalidad.BackColor = System.Drawing.Color.White;
             this.inputNacionalidad.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputNacionalidad.ForeColor = System.Drawing.Color.Silver;
+            this.inputNacionalidad.ForeColor = System.Drawing.Color.Black;
             this.inputNacionalidad.Location = new System.Drawing.Point(666, 86);
             this.inputNacionalidad.Name = "inputNacionalidad";
             this.inputNacionalidad.PlaceholderText = "Ingrese Nacionalidad";
@@ -418,7 +420,7 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.inputFechaNac.BackColor = System.Drawing.Color.White;
             this.inputFechaNac.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputFechaNac.ForeColor = System.Drawing.Color.Silver;
+            this.inputFechaNac.ForeColor = System.Drawing.Color.Black;
             this.inputFechaNac.Location = new System.Drawing.Point(666, 149);
             this.inputFechaNac.Name = "inputFechaNac";
             this.inputFechaNac.PlaceholderText = "dd-mm-aaaa";
@@ -429,7 +431,7 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.inputObraSocial.BackColor = System.Drawing.Color.White;
             this.inputObraSocial.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputObraSocial.ForeColor = System.Drawing.Color.Silver;
+            this.inputObraSocial.ForeColor = System.Drawing.Color.Black;
             this.inputObraSocial.Location = new System.Drawing.Point(666, 217);
             this.inputObraSocial.Name = "inputObraSocial";
             this.inputObraSocial.PlaceholderText = "Ingrese Obra social";
@@ -440,7 +442,7 @@ namespace SANATORIO_HIPOCRATES
             // 
             this.inputCarnet.BackColor = System.Drawing.Color.White;
             this.inputCarnet.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.inputCarnet.ForeColor = System.Drawing.Color.Silver;
+            this.inputCarnet.ForeColor = System.Drawing.Color.Black;
             this.inputCarnet.Location = new System.Drawing.Point(666, 284);
             this.inputCarnet.Name = "inputCarnet";
             this.inputCarnet.PlaceholderText = "Ingrese Numero de afiliado";

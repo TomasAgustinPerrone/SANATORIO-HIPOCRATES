@@ -261,5 +261,10 @@ namespace SANATORIO_HIPOCRATES
         {
 
         }
+
+        private void inputDNI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

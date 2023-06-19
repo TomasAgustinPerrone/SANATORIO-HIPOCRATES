@@ -16,7 +16,7 @@ namespace SANATORIO_HIPOCRATES.Config
             var optionsBuilder = new DbContextOptionsBuilder<Conexion>();
             optionsBuilder
                 .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole()))
-                .UseMySql("Server=localhost;Database=sanatorio;Uid=root;Pwd=123456;",
+                .UseMySql("Server=localhost;Database=sanatorio;Uid=root;Pwd=;",
                 new MySqlServerVersion(new Version(8, 0, 21))
             );
 
