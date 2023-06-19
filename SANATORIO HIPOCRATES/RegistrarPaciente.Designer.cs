@@ -63,6 +63,16 @@ namespace SANATORIO_HIPOCRATES
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.textBox11 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -469,12 +479,132 @@ namespace SANATORIO_HIPOCRATES
             this.textBox1.Size = new System.Drawing.Size(292, 27);
             this.textBox1.TabIndex = 64;
             // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox2.ForeColor = System.Drawing.Color.Silver;
+            this.textBox2.Location = new System.Drawing.Point(294, 164);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.PlaceholderText = "Ingrese NOMBRE";
+            this.textBox2.Size = new System.Drawing.Size(292, 27);
+            this.textBox2.TabIndex = 65;
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.White;
+            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox3.ForeColor = System.Drawing.Color.Silver;
+            this.textBox3.Location = new System.Drawing.Point(295, 232);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.PlaceholderText = "Ingrese APELLIDO";
+            this.textBox3.Size = new System.Drawing.Size(292, 27);
+            this.textBox3.TabIndex = 66;
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.White;
+            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox4.ForeColor = System.Drawing.Color.Silver;
+            this.textBox4.Location = new System.Drawing.Point(293, 302);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.PlaceholderText = "Ingrese F= Femenino M=Masculino";
+            this.textBox4.Size = new System.Drawing.Size(292, 27);
+            this.textBox4.TabIndex = 67;
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.White;
+            this.textBox5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox5.ForeColor = System.Drawing.Color.Silver;
+            this.textBox5.Location = new System.Drawing.Point(294, 372);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.PlaceholderText = "Ej: 1135222048";
+            this.textBox5.Size = new System.Drawing.Size(292, 27);
+            this.textBox5.TabIndex = 68;
+            // 
+            // textBox6
+            // 
+            this.textBox6.BackColor = System.Drawing.Color.White;
+            this.textBox6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox6.ForeColor = System.Drawing.Color.Silver;
+            this.textBox6.Location = new System.Drawing.Point(291, 439);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.PlaceholderText = "Ejemplo@xxxx.com";
+            this.textBox6.Size = new System.Drawing.Size(292, 27);
+            this.textBox6.TabIndex = 69;
+            // 
+            // textBox7
+            // 
+            this.textBox7.BackColor = System.Drawing.Color.White;
+            this.textBox7.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox7.ForeColor = System.Drawing.Color.Silver;
+            this.textBox7.Location = new System.Drawing.Point(295, 506);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.PlaceholderText = "Calle Numero Dpto/Piso Localidad";
+            this.textBox7.Size = new System.Drawing.Size(292, 27);
+            this.textBox7.TabIndex = 70;
+            // 
+            // textBox8
+            // 
+            this.textBox8.BackColor = System.Drawing.Color.White;
+            this.textBox8.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox8.ForeColor = System.Drawing.Color.Silver;
+            this.textBox8.Location = new System.Drawing.Point(666, 105);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.PlaceholderText = "Ingrese Nacionalidad";
+            this.textBox8.Size = new System.Drawing.Size(292, 27);
+            this.textBox8.TabIndex = 71;
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.White;
+            this.textBox9.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox9.ForeColor = System.Drawing.Color.Silver;
+            this.textBox9.Location = new System.Drawing.Point(666, 164);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.PlaceholderText = "dd-mm-aaaa";
+            this.textBox9.Size = new System.Drawing.Size(292, 27);
+            this.textBox9.TabIndex = 72;
+            // 
+            // textBox10
+            // 
+            this.textBox10.BackColor = System.Drawing.Color.White;
+            this.textBox10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox10.ForeColor = System.Drawing.Color.Silver;
+            this.textBox10.Location = new System.Drawing.Point(675, 232);
+            this.textBox10.Name = "textBox10";
+            this.textBox10.PlaceholderText = "Ingrese Obra social";
+            this.textBox10.Size = new System.Drawing.Size(292, 27);
+            this.textBox10.TabIndex = 73;
+            // 
+            // textBox11
+            // 
+            this.textBox11.BackColor = System.Drawing.Color.White;
+            this.textBox11.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.textBox11.ForeColor = System.Drawing.Color.Silver;
+            this.textBox11.Location = new System.Drawing.Point(666, 302);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.PlaceholderText = "Ingrese Numero de afiliado";
+            this.textBox11.Size = new System.Drawing.Size(292, 27);
+            this.textBox11.TabIndex = 74;
+            // 
             // RegistrarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.ClientSize = new System.Drawing.Size(1116, 614);
+            this.Controls.Add(this.textBox11);
+            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.textBox9);
+            this.Controls.Add(this.textBox8);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.btnMinimizar);
@@ -558,5 +688,15 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox textBox11;
     }
 }
