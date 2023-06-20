@@ -62,6 +62,8 @@ namespace SANATORIO_HIPOCRATES
             this.button2BORRAR = new System.Windows.Forms.Button();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
@@ -394,6 +396,7 @@ namespace SANATORIO_HIPOCRATES
             this.label14CONTRASEÑA.Size = new System.Drawing.Size(83, 20);
             this.label14CONTRASEÑA.TabIndex = 95;
             this.label14CONTRASEÑA.Text = "Contraseña";
+            this.label14CONTRASEÑA.Click += new System.EventHandler(this.label14CONTRASEÑA_Click);
             // 
             // buttonGUARDAR
             // 
@@ -405,9 +408,9 @@ namespace SANATORIO_HIPOCRATES
             this.buttonGUARDAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonGUARDAR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.buttonGUARDAR.ForeColor = System.Drawing.SystemColors.Window;
-            this.buttonGUARDAR.Location = new System.Drawing.Point(572, 475);
+            this.buttonGUARDAR.Location = new System.Drawing.Point(900, 143);
             this.buttonGUARDAR.Name = "buttonGUARDAR";
-            this.buttonGUARDAR.Size = new System.Drawing.Size(221, 45);
+            this.buttonGUARDAR.Size = new System.Drawing.Size(173, 45);
             this.buttonGUARDAR.TabIndex = 97;
             this.buttonGUARDAR.Text = "Guardar registro";
             this.buttonGUARDAR.UseVisualStyleBackColor = false;
@@ -423,9 +426,9 @@ namespace SANATORIO_HIPOCRATES
             this.button2BORRAR.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2BORRAR.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button2BORRAR.ForeColor = System.Drawing.SystemColors.Window;
-            this.button2BORRAR.Location = new System.Drawing.Point(822, 475);
+            this.button2BORRAR.Location = new System.Drawing.Point(900, 350);
             this.button2BORRAR.Name = "button2BORRAR";
-            this.button2BORRAR.Size = new System.Drawing.Size(221, 45);
+            this.button2BORRAR.Size = new System.Drawing.Size(173, 45);
             this.button2BORRAR.TabIndex = 98;
             this.button2BORRAR.Text = "Borrar datos";
             this.button2BORRAR.UseVisualStyleBackColor = false;
@@ -457,6 +460,32 @@ namespace SANATORIO_HIPOCRATES
             this.btnCerrar.TabStop = false;
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
+            "Recepcion"});
+            this.comboBox1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.comboBox1.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(572, 485);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(292, 28);
+            this.comboBox1.TabIndex = 101;
+            this.comboBox1.Text = "Recepcion";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.ForeColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(572, 464);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 102;
+            this.label1.Text = "Sector";
+            // 
             // RegistrarEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -464,6 +493,8 @@ namespace SANATORIO_HIPOCRATES
             this.BackgroundImage = global::SANATORIO_HIPOCRATES.Properties.Resources.foto_empleado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1097, 532);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.button2BORRAR);
@@ -541,5 +572,7 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.Button button2BORRAR;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

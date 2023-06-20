@@ -17,10 +17,16 @@ namespace SANATORIO_HIPOCRATES
         private Point lastLocation;
         public RegistrarEmpleado()
         {
+
             InitializeComponent();
             this.MouseDown += Form1_MouseDown;
             this.MouseMove += Form1_MouseMove;
             this.MouseUp += Form1_MouseUp;
+
+            //DESPLEGABLE DE SECTOR
+            comboBox1.Items.Add("Recepcion");
+            comboBox1.Items.Add("Medico");
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
         }
         private void Form1_MouseDown(object sender, MouseEventArgs e)
         {
@@ -56,8 +62,6 @@ namespace SANATORIO_HIPOCRATES
         {
             this.WindowState = FormWindowState.Minimized;
         }
-        
-        
         //FIN DETALLE VENTANA
 
         private void label6_Click(object sender, EventArgs e)
@@ -87,7 +91,7 @@ namespace SANATORIO_HIPOCRATES
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            string valorSeleccionado = comboBox1.SelectedItem.ToString();
         }
 
         private void button2BORRAR_Click(object sender, EventArgs e)
@@ -105,7 +109,22 @@ namespace SANATORIO_HIPOCRATES
             textBoxCONTRASEÑA.Text = "";
             TEXSALARIO.Text = "";
             textFECHAINICIO.Text = "";
+            comboBox1.Text = "";
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label14CONTRASEÑA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
