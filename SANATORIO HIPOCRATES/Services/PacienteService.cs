@@ -16,20 +16,13 @@ namespace SANATORIO_HIPOCRATES.Services
     public class PacienteService
     {
 
-        public DbContextOptionsBuilder<Conexion> conexionConDB()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<Conexion>();
-            optionsBuilder.UseMySql("Server=localhost;Database=sanatorio;Uid=root;Pwd=;",
-                    new MySqlServerVersion(new Version(8, 0, 21))
-            );
-
-            return optionsBuilder;
-        }
+        ConexionService conexionService = new ConexionService();
 
 
         public Paciente BuscarPacienteByIdDePersona(long idPersona)
         {
-            using (var context = new Conexion(conexionConDB().Options))
+
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
             {
                 var pacienteExistente = context.Pacientes.FirstOrDefault(p => p.IdPersona == idPersona);
 
@@ -46,7 +39,7 @@ namespace SANATORIO_HIPOCRATES.Services
 
         public Paciente BuscarPacienteEnDB(long nroCarnet)
         {
-            using (var context = new Conexion(conexionConDB().Options))
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
             {
                 var pacienteExistente = context.Pacientes.FirstOrDefault(p => p.NumeroCarnet == nroCarnet);
 
@@ -65,7 +58,7 @@ namespace SANATORIO_HIPOCRATES.Services
         public Paciente CrearPaciente(string obraSocial, long nroCarnet, Persona persona)
         {
 
-            using (var context = new Conexion(conexionConDB().Options))
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
             {
 
                 try

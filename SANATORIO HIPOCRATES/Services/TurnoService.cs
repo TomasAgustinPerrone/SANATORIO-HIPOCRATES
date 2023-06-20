@@ -14,19 +14,11 @@ namespace SANATORIO_HIPOCRATES.Services
     public class TurnoService
     {
 
-        public DbContextOptionsBuilder<Conexion> conexionConDB()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<Conexion>();
-            optionsBuilder.UseMySql("Server=localhost;Database=sanatorio;Uid=root;Pwd=;",
-                    new MySqlServerVersion(new Version(8, 0, 21))
-            );
-
-            return optionsBuilder;
-        }
+        ConexionService conexionService = new ConexionService();
 
         public Turno BuscarTurnoEnDB(long idPaciente)
         {
-            using (var context = new Conexion(conexionConDB().Options))
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
             {
                 var turnoExistente = context.Turnos.FirstOrDefault(p => p.IdPaciente == idPaciente);
 
@@ -45,7 +37,7 @@ namespace SANATORIO_HIPOCRATES.Services
         public Turno CrearTurnoEnDB(long idPaciente)
         {
 
-            using (var context = new Conexion(conexionConDB().Options))
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
             {
 
                 try
@@ -75,7 +67,7 @@ namespace SANATORIO_HIPOCRATES.Services
 
         public List<Turno> mostrarTodosLosTurnos()
         {
-            using (var context = new Conexion(conexionConDB().Options))
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
             {
                 return context.Turnos.ToList();
             }

@@ -16,19 +16,11 @@ namespace SANATORIO_HIPOCRATES.Services
     public class PersonaService
     {
 
-        public DbContextOptionsBuilder<Conexion> conexionConDB()
-        {
-            var optionsBuilder = new DbContextOptionsBuilder<Conexion>();
-            optionsBuilder.UseMySql("Server=localhost;Database=sanatorio;Uid=root;Pwd=;",
-                    new MySqlServerVersion(new Version(8, 0, 21))
-            );
-
-            return optionsBuilder;
-        }
+        ConexionService conexionService = new ConexionService();
 
         public Persona BuscarPersonaById(long idPersona)
         {
-            using (var context = new Conexion(conexionConDB().Options))
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
             {
                 var personaExistente = context.Personas.FirstOrDefault(p => p.IdPersona == idPersona);
 
@@ -45,7 +37,7 @@ namespace SANATORIO_HIPOCRATES.Services
 
         public Persona BuscarPersonaEnDB(long dni)
         {
-            using (var context = new Conexion(conexionConDB().Options))
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
             {
                 var personaExistente = context.Personas.FirstOrDefault(p => p.Dni == dni);
 
@@ -64,7 +56,7 @@ namespace SANATORIO_HIPOCRATES.Services
             string email, string domicilio, DateTime fechaNacimiento, string nacionalidad)
         {
 
-            using (var context = new Conexion(conexionConDB().Options))
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
             {
                 try
                 {
