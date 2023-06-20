@@ -60,11 +60,9 @@ namespace SANATORIO_HIPOCRATES
             this.label14CONTRASEÑA = new System.Windows.Forms.Label();
             this.buttonGUARDAR = new System.Windows.Forms.Button();
             this.button2BORRAR = new System.Windows.Forms.Button();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
@@ -433,19 +431,9 @@ namespace SANATORIO_HIPOCRATES
             this.button2BORRAR.UseVisualStyleBackColor = false;
             this.button2BORRAR.Click += new System.EventHandler(this.button2BORRAR_Click);
             // 
-            // btnMaximizar
-            // 
-            this.btnMaximizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMaximizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.Image")));
-            this.btnMaximizar.Location = new System.Drawing.Point(1063, 39);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(22, 23);
-            this.btnMaximizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMaximizar.TabIndex = 101;
-            this.btnMaximizar.TabStop = false;
-            // 
             // btnMinimizar
             // 
+            this.btnMinimizar.BackColor = System.Drawing.Color.Transparent;
             this.btnMinimizar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
             this.btnMinimizar.Location = new System.Drawing.Point(1035, 9);
@@ -454,9 +442,11 @@ namespace SANATORIO_HIPOCRATES
             this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnMinimizar.TabIndex = 100;
             this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click_1);
             // 
             // btnCerrar
             // 
+            this.btnCerrar.BackColor = System.Drawing.Color.Transparent;
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCerrar.Image = ((System.Drawing.Image)(resources.GetObject("btnCerrar.Image")));
             this.btnCerrar.Location = new System.Drawing.Point(1063, 9);
@@ -465,6 +455,7 @@ namespace SANATORIO_HIPOCRATES
             this.btnCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnCerrar.TabIndex = 99;
             this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // RegistrarEmpleado
             // 
@@ -473,7 +464,6 @@ namespace SANATORIO_HIPOCRATES
             this.BackgroundImage = global::SANATORIO_HIPOCRATES.Properties.Resources.foto_empleado;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1097, 532);
-            this.Controls.Add(this.btnMaximizar);
             this.Controls.Add(this.btnMinimizar);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.button2BORRAR);
@@ -510,7 +500,6 @@ namespace SANATORIO_HIPOCRATES
             this.Name = "RegistrarEmpleado";
             this.Text = "RegistrarEmpleado";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
@@ -550,7 +539,6 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.Label label14CONTRASEÑA;
         private System.Windows.Forms.Button buttonGUARDAR;
         private System.Windows.Forms.Button button2BORRAR;
-        private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
     }

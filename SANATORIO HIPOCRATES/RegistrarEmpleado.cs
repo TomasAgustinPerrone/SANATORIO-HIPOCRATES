@@ -12,11 +12,53 @@ namespace SANATORIO_HIPOCRATES
 {
     public partial class RegistrarEmpleado : Form
     {
-
+        //MOVIMIENTO DE VENTANA
+        private bool mouseDown;
+        private Point lastLocation;
         public RegistrarEmpleado()
         {
             InitializeComponent();
+            this.MouseDown += Form1_MouseDown;
+            this.MouseMove += Form1_MouseMove;
+            this.MouseUp += Form1_MouseUp;
         }
+        private void Form1_MouseDown(object sender, MouseEventArgs e)
+        {
+            mouseDown = true;
+            lastLocation = e.Location;
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (mouseDown)
+            {
+                this.Location = new Point(
+                    (this.Location.X - lastLocation.X) + e.X,
+                    (this.Location.Y - lastLocation.Y) + e.Y);
+
+                this.Update();
+            }
+        }
+
+        private void Form1_MouseUp(object sender, MouseEventArgs e)
+        {
+            mouseDown = false;
+        }
+
+        //FIN MOVIMIENTO DE VENTANA
+        //BOTONES DE VENTANAS
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        //Boton minimizar
+        private void btnMinimizar_Click_1(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+        
+        
+        //FIN DETALLE VENTANA
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -64,5 +106,6 @@ namespace SANATORIO_HIPOCRATES
             TEXSALARIO.Text = "";
             textFECHAINICIO.Text = "";
         }
+
     }
 }
