@@ -62,6 +62,7 @@ namespace SANATORIO_HIPOCRATES
             this.inputFechaNac = new System.Windows.Forms.TextBox();
             this.inputObraSocial = new System.Windows.Forms.TextBox();
             this.inputCarnet = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -69,6 +70,7 @@ namespace SANATORIO_HIPOCRATES
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -110,7 +112,7 @@ namespace SANATORIO_HIPOCRATES
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(30, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 20);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(184, 171);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -285,6 +287,7 @@ namespace SANATORIO_HIPOCRATES
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(114)))), ((int)(((byte)(187)))));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.pictureBox4);
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(252, 613);
@@ -449,6 +452,16 @@ namespace SANATORIO_HIPOCRATES
             this.inputCarnet.Size = new System.Drawing.Size(292, 27);
             this.inputCarnet.TabIndex = 74;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::SANATORIO_HIPOCRATES.Properties.Resources.imagen_form_registro;
+            this.pictureBox4.Location = new System.Drawing.Point(-3, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(255, 613);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 19;
+            this.pictureBox4.TabStop = false;
+            // 
             // RegistrarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -497,6 +510,7 @@ namespace SANATORIO_HIPOCRATES
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -537,5 +551,6 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.TextBox inputFechaNac;
         private System.Windows.Forms.TextBox inputObraSocial;
         private System.Windows.Forms.TextBox inputCarnet;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }
