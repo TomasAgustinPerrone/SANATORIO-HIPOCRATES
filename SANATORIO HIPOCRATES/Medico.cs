@@ -88,5 +88,10 @@ namespace SANATORIO_HIPOCRATES
             //    ));
             //doc.Close();
         }
+
+        private void Medico_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -73,6 +73,16 @@ namespace SANATORIO_HIPOCRATES.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap foto_empleado {
+            get {
+                object obj = ResourceManager.GetObject("foto_empleado", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imagen_form_registro {
             get {
                 object obj = ResourceManager.GetObject("imagen_form_registro", resourceCulture);

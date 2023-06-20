@@ -209,6 +209,7 @@ namespace SANATORIO_HIPOCRATES
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Medico";
             this.Text = "Medico";
+            this.Load += new System.EventHandler(this.Medico_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

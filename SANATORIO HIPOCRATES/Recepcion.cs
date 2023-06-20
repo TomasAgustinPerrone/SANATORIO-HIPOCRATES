@@ -291,5 +291,10 @@ namespace SANATORIO_HIPOCRATES
         {
 
         }
+
+        private void Recepcion_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

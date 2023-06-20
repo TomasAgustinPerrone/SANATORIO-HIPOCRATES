@@ -42,6 +42,7 @@ namespace SANATORIO_HIPOCRATES
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
@@ -56,15 +57,14 @@ namespace SANATORIO_HIPOCRATES
             this.inputFechaNac = new System.Windows.Forms.TextBox();
             this.inputObraSocial = new System.Windows.Forms.TextBox();
             this.inputCarnet = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // button3
@@ -287,6 +287,16 @@ namespace SANATORIO_HIPOCRATES
             this.panel1.Size = new System.Drawing.Size(252, 613);
             this.panel1.TabIndex = 59;
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::SANATORIO_HIPOCRATES.Properties.Resources.imagen_form_registro;
+            this.pictureBox4.Location = new System.Drawing.Point(-3, 0);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(255, 613);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 19;
+            this.pictureBox4.TabStop = false;
+            // 
             // btnCerrar
             // 
             this.btnCerrar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -446,16 +456,6 @@ namespace SANATORIO_HIPOCRATES
             this.inputCarnet.Size = new System.Drawing.Size(292, 27);
             this.inputCarnet.TabIndex = 74;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::SANATORIO_HIPOCRATES.Properties.Resources.imagen_form_registro;
-            this.pictureBox4.Location = new System.Drawing.Point(-3, 0);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(255, 613);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 19;
-            this.pictureBox4.TabStop = false;
-            // 
             // RegistrarPaciente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -501,10 +501,10 @@ namespace SANATORIO_HIPOCRATES
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
