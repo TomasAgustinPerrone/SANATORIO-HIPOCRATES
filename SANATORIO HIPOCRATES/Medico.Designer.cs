@@ -123,8 +123,9 @@ namespace SANATORIO_HIPOCRATES
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(548, 30);
             this.button1.TabIndex = 64;
-            this.button1.Text = "ATENDER PROXIMO PACIENTE";
+            this.button1.Text = "ATENDER PACIENTE";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LlamarPaciente
             // 
@@ -152,6 +153,7 @@ namespace SANATORIO_HIPOCRATES
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(772, 411);
             this.dataGridView1.TabIndex = 66;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // btnMaximizar
             // 

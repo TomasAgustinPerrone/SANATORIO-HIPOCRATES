@@ -18,6 +18,7 @@ namespace SANATORIO_HIPOCRATES
 {
     public partial class Recepcion : Form
     {
+        //MOVIMIENTO DE VENTANA
         private bool mouseDown;
         private Point lastLocation;
         public Recepcion()
@@ -49,6 +50,7 @@ namespace SANATORIO_HIPOCRATES
         {
             mouseDown = false;
         }
+        //FIN MOVIMIENTO DE VENTANA
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
@@ -89,20 +91,12 @@ namespace SANATORIO_HIPOCRATES
 
         }
 
-        private void refrescar_Click(object sender, EventArgs e)
-        {
-            TurnoService turnoService = new TurnoService();
-            List<Turno> turnos = turnoService.mostrarTodosLosTurnos();
-
-            dataGridView1.AutoGenerateColumns = true;
-            dataGridView1.DataSource = turnos;
-        }
-
         private void listaTurnos_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        //BOTON BUSCAR POR DNI
         private void button4_Click(object sender, EventArgs e)
         {
             PersonaService personaService = new PersonaService();
@@ -142,7 +136,7 @@ namespace SANATORIO_HIPOCRATES
         {
 
         }
-
+        //BUSCAR EL PACIENTE POR CARNET
         private void buscarPacientePorCarnet_Click(object sender, EventArgs e)
         {
 
@@ -206,6 +200,7 @@ namespace SANATORIO_HIPOCRATES
 
         }
 
+        //BOTON GENERA TURNO 
         private void generarTurno_Click(object sender, EventArgs e)
         {
             foreach (DataGridViewRow row in dataGridPacientes.Rows)
@@ -228,6 +223,8 @@ namespace SANATORIO_HIPOCRATES
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = turnos;
 
+            //EXPEDIR DIAGNOSTICO
+
             Document doc = new Document();
             PdfWriter.GetInstance(doc, new FileStream($"{turnos[0].IdPaciente}_turno.pdf", FileMode.Create));
             doc.Open();
@@ -241,17 +238,28 @@ namespace SANATORIO_HIPOCRATES
                 ));
             doc.Close();
         }
+        //BOTON REFRESCAR
+        private void refrescar_Click(object sender, EventArgs e)
+        {
+            TurnoService turnoService = new TurnoService();
+            List<Turno> turnos = turnoService.mostrarTodosLosTurnos();
 
+            dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.DataSource = turnos;
+        }
         private void inputCarnet_TextChanged(object sender, EventArgs e)
         {
 
         }
 
+        //REGISTRAR PACIENTE
         private void button5_Click(object sender, EventArgs e)
         {
             RegistrarPaciente registrarPaciente = new RegistrarPaciente();
             registrarPaciente.Show();
         }
+
+        //DETALLE VENTANA
         //Boton cerrar
         private void btnCerrar_Click(object sender, EventArgs e)
         {
@@ -277,6 +285,11 @@ namespace SANATORIO_HIPOCRATES
                 this.WindowState = FormWindowState.Maximized; // Maximiza la ventana
                 isMaximized = true;
             }
+        }
+        //FIN DETALLE VENTANA
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

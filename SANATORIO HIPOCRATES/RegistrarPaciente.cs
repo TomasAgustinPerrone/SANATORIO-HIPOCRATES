@@ -9,6 +9,7 @@ namespace SANATORIO_HIPOCRATES
 {
     public partial class RegistrarPaciente : Form
     {
+        //MOVIMIENTO DE VENTANA
         private bool mouseDown;
         private Point lastLocation;
         public RegistrarPaciente()
@@ -41,11 +42,14 @@ namespace SANATORIO_HIPOCRATES
             mouseDown = false;
         }
 
+        //FIN MOVIMIENTO DE VENTANA
+
         private void label6_Click(object sender, EventArgs e)
         {
 
         }
 
+        //BOTON GUARDAR REGISTRO
         private void button1_Click(object sender, EventArgs e)
         {
             Recepcionista recepcionista = new Recepcionista();
@@ -76,12 +80,14 @@ namespace SANATORIO_HIPOCRATES
             string fechaComoCadena = inputFechaNac.Text;
             string obraSocial = inputObraSocial.Text;
 
+            //VALIDACIONES DEL SISTEMA
             if (!long.TryParse(inputDNI.Text, out long dni))
             {
                 MessageBox.Show("Por favor, ingrese un número válido para el DNI.");
                 return;
             }
 
+            //Validacion numero de carnet.
             if (!long.TryParse(inputCarnet.Text, out long numeroCarnet))
             {
                 MessageBox.Show("Por favor, ingrese un número válido para el carnet.");
@@ -133,6 +139,7 @@ namespace SANATORIO_HIPOCRATES
 
         }
 
+        //BOTON BORRAR DATOS DE INPUTS
         private void button3_Click(object sender, EventArgs e)
         {
             inputDNI.Text = "";
@@ -148,10 +155,9 @@ namespace SANATORIO_HIPOCRATES
             inputCarnet.Text = "";
         }
 
-        private void btnCerrar_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-        }
+        
+        //DETALLE VENTANA
+        //Boton maximizar
         private bool isMaximized = false;
         private void btnMaximizar_Click(object sender, EventArgs e)
         {
@@ -167,15 +173,18 @@ namespace SANATORIO_HIPOCRATES
             }
 
         }
+        //Boton cerrar
         private void btnCerrar_Click_1(object sender, EventArgs e)
         {
             this.Hide();
         }
 
+        //Boton minimizar
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Minimized;
         }
+        //FIN DETALLE VENTANA
 
         private void RegistrarPaciente_Load(object sender, EventArgs e)
         {

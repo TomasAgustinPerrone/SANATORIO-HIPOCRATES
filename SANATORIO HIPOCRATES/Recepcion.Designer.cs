@@ -339,6 +339,7 @@ namespace SANATORIO_HIPOCRATES
             this.label4.Size = new System.Drawing.Size(112, 17);
             this.label4.TabIndex = 15;
             this.label4.Text = "Lista de paciente";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel4
             // 

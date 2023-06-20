@@ -13,7 +13,7 @@ namespace SANATORIO_HIPOCRATES
 {
     public partial class Form1 : Form
     {
-        //VENTANA SE MUEVA
+        //MOVIMIENTO DE VENTANA
         private bool mouseDown;
         private Point lastLocation;
         public Form1()
@@ -41,11 +41,12 @@ namespace SANATORIO_HIPOCRATES
                 this.Update();
             }
         }
-
+        
         private void Form1_MouseUp(object sender, MouseEventArgs e)
         {
             mouseDown = false;
         }
+        //FIN MOVIMIENTO DE VENTANA
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -67,6 +68,7 @@ namespace SANATORIO_HIPOCRATES
 
         }
 
+        
         private void txtUser_Enter(object sender, EventArgs e)
         {
             if (txtUser.Text == "Usuario")

@@ -1,15 +1,10 @@
-using Microsoft.EntityFrameworkCore;
-using SANATORIO_HIPOCRATES.Config;
-using SANATORIO_HIPOCRATES.Entidades;
-using SANATORIO_HIPOCRATES.Services;
 using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace SANATORIO_HIPOCRATES
 {
     static class Program
-    { 
+    {
         [STAThread]
         static void Main()
         {
