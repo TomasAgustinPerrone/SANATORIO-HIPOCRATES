@@ -210,5 +210,10 @@ namespace SANATORIO_HIPOCRATES.Formularios
         {
 
         }
+
+        private void inputDNI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

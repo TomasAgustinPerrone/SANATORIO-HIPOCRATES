@@ -103,6 +103,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputDomicilio.PlaceholderText = "Calle Numero Dpto/Piso Localidad";
             this.inputDomicilio.Size = new System.Drawing.Size(292, 27);
             this.inputDomicilio.TabIndex = 84;
+            this.inputDomicilio.TabStop = false;
             // 
             // inputMail
             // 
@@ -114,6 +115,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputMail.PlaceholderText = "Ejemplo@xxxx.com";
             this.inputMail.Size = new System.Drawing.Size(292, 27);
             this.inputMail.TabIndex = 83;
+            this.inputMail.TabStop = false;
             // 
             // inputTlf
             // 
@@ -125,6 +127,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputTlf.PlaceholderText = "Ej: 1135222048";
             this.inputTlf.Size = new System.Drawing.Size(292, 27);
             this.inputTlf.TabIndex = 82;
+            this.inputTlf.TabStop = false;
             // 
             // inputSexo
             // 
@@ -136,6 +139,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputSexo.PlaceholderText = "Ingrese F= Femenino M=Masculino";
             this.inputSexo.Size = new System.Drawing.Size(292, 27);
             this.inputSexo.TabIndex = 81;
+            this.inputSexo.TabStop = false;
             // 
             // inputApellido
             // 
@@ -147,6 +151,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputApellido.PlaceholderText = "Ingrese APELLIDO";
             this.inputApellido.Size = new System.Drawing.Size(292, 27);
             this.inputApellido.TabIndex = 80;
+            this.inputApellido.TabStop = false;
             // 
             // inputNombre
             // 
@@ -159,10 +164,12 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputNombre.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.inputNombre.Size = new System.Drawing.Size(292, 27);
             this.inputNombre.TabIndex = 79;
+            this.inputNombre.TabStop = false;
             // 
             // inputDNI
             // 
             this.inputDNI.BackColor = System.Drawing.Color.White;
+            this.inputDNI.CausesValidation = false;
             this.inputDNI.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputDNI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.inputDNI.Location = new System.Drawing.Point(225, 80);
@@ -170,6 +177,8 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputDNI.PlaceholderText = "Ingrese DNI";
             this.inputDNI.Size = new System.Drawing.Size(292, 27);
             this.inputDNI.TabIndex = 78;
+            this.inputDNI.TabStop = false;
+            this.inputDNI.TextChanged += new System.EventHandler(this.inputDNI_TextChanged);
             // 
             // label8DOMICILIO
             // 
@@ -265,6 +274,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputFechaNac.PlaceholderText = "dd-mm-aaaa";
             this.inputFechaNac.Size = new System.Drawing.Size(292, 27);
             this.inputFechaNac.TabIndex = 88;
+            this.inputFechaNac.TabStop = false;
             // 
             // inputNacionalidad
             // 
@@ -276,6 +286,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputNacionalidad.PlaceholderText = "Ingrese Nacionalidad";
             this.inputNacionalidad.Size = new System.Drawing.Size(292, 27);
             this.inputNacionalidad.TabIndex = 87;
+            this.inputNacionalidad.TabStop = false;
             // 
             // label10FECHANAC
             // 
@@ -311,6 +322,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputFechaAlta.PlaceholderText = "dd-mm-aaaa";
             this.inputFechaAlta.Size = new System.Drawing.Size(292, 27);
             this.inputFechaAlta.TabIndex = 92;
+            this.inputFechaAlta.TabStop = false;
             this.inputFechaAlta.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // inputSalario
@@ -323,6 +335,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputSalario.PlaceholderText = "Ingrese Salario Bruto";
             this.inputSalario.Size = new System.Drawing.Size(292, 27);
             this.inputSalario.TabIndex = 91;
+            this.inputSalario.TabStop = false;
             this.inputSalario.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label12INICIO
@@ -361,6 +374,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputUsername.PlaceholderText = "Ingrese usuario";
             this.inputUsername.Size = new System.Drawing.Size(292, 27);
             this.inputUsername.TabIndex = 94;
+            this.inputUsername.TabStop = false;
             // 
             // label13usuario
             // 
@@ -384,6 +398,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputPassword.PlaceholderText = "Ingrese contraseña";
             this.inputPassword.Size = new System.Drawing.Size(292, 27);
             this.inputPassword.TabIndex = 96;
+            this.inputPassword.TabStop = false;
             // 
             // label14CONTRASEÑA
             // 
@@ -471,7 +486,8 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(292, 28);
             this.comboBox1.TabIndex = 101;
-            this.comboBox1.Text = "Recepcion";
+            this.comboBox1.TabStop = false;
+            this.comboBox1.Text = "Ingresar sector asignado";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label1

@@ -324,11 +324,13 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.inputDNI.BackColor = System.Drawing.Color.White;
             this.inputDNI.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.inputDNI.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.inputDNI.HideSelection = false;
             this.inputDNI.Location = new System.Drawing.Point(295, 85);
             this.inputDNI.Name = "inputDNI";
             this.inputDNI.PlaceholderText = "Ingrese DNI";
             this.inputDNI.Size = new System.Drawing.Size(292, 27);
             this.inputDNI.TabIndex = 64;
+            this.inputDNI.TabStop = false;
             this.inputDNI.TextChanged += new System.EventHandler(this.inputDNI_TextChanged);
             // 
             // inputNombre

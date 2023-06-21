@@ -54,10 +54,10 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.txtContra.ForeColor = System.Drawing.Color.CadetBlue;
             this.txtContra.Location = new System.Drawing.Point(432, 185);
             this.txtContra.Name = "txtContra";
+            this.txtContra.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtContra.Size = new System.Drawing.Size(209, 27);
             this.txtContra.TabIndex = 2;
             this.txtContra.Text = "Contraseña";
-            this.txtContra.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtContra.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             this.txtContra.Enter += new System.EventHandler(this.txtContra_Enter);
             this.txtContra.Leave += new System.EventHandler(this.txtContra_Leave);
@@ -103,10 +103,10 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.txtUser.ForeColor = System.Drawing.Color.CadetBlue;
             this.txtUser.Location = new System.Drawing.Point(432, 137);
             this.txtUser.Name = "txtUser";
+            this.txtUser.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtUser.Size = new System.Drawing.Size(209, 27);
             this.txtUser.TabIndex = 1;
             this.txtUser.Text = "Usuario";
-            this.txtUser.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtUser.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             this.txtUser.Enter += new System.EventHandler(this.txtUser_Enter);
             this.txtUser.Leave += new System.EventHandler(this.txtUser_Leave);

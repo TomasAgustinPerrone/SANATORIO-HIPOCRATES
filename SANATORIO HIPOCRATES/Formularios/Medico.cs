@@ -51,21 +51,6 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.Hide();
         }
 
-        private bool isMaximized = false;
-        private void btnMaximizar_Click(object sender, EventArgs e)
-        {
-            if (isMaximized)
-            {
-                this.WindowState = FormWindowState.Normal; // Restaura la ventana al tamaño normal
-                isMaximized = false;
-            }
-            else
-            {
-                this.WindowState = FormWindowState.Maximized; // Maximiza la ventana
-                isMaximized = true;
-            }
-        }
-
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
