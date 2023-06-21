@@ -27,7 +27,7 @@ namespace SANATORIO_HIPOCRATES.Config
 
         public static bool VerificarPassword(string passwordIngresada, string hashAlmacenado)
         {
-            string hashPasswordIngresada = GenerarHash(passwordIngresada);
+            string hashPasswordIngresada = GenerarHash(passwordIngresada.Trim() );
             return hashPasswordIngresada == hashAlmacenado;
         }
 

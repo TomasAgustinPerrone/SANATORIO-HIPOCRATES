@@ -1,5 +1,5 @@
 ﻿
-namespace SANATORIO_HIPOCRATES
+namespace SANATORIO_HIPOCRATES.Formularios
 {
     partial class Medico
     {

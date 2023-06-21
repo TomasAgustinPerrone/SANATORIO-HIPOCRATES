@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-namespace SANATORIO_HIPOCRATES
+namespace SANATORIO_HIPOCRATES.Formularios
 {
     public partial class Recepcion : Form
     {
@@ -280,6 +280,13 @@ namespace SANATORIO_HIPOCRATES
         private void Recepcion_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 form1 = new Form1();
+            form1.Show();
+            this.Close();
         }
     }
 }

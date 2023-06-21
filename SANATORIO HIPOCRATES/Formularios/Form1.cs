@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SANATORIO_HIPOCRATES.Excepciones;
+using SANATORIO_HIPOCRATES.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace SANATORIO_HIPOCRATES
+namespace SANATORIO_HIPOCRATES.Formularios
 {
     public partial class Form1 : Form
     {
@@ -111,6 +113,36 @@ namespace SANATORIO_HIPOCRATES
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void registrarUsuario_Click(object sender, EventArgs e)
+        {
+            RegistrarEmpleado registrarEmpleado = new RegistrarEmpleado();
+            registrarEmpleado.ShowDialog();
+        }
+
+        private void botonIngresar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                LoginService login = new LoginService();
+                if (login.IniciarSesion(txtUser.Text, txtContra.Text))
+                {
+                    MessageBox.Show("Sesión iniciada con éxito");
+                    Recepcion recepcion = new Recepcion();
+                    recepcion.Show();
+                    this.Hide();
+                } 
+                else
+                {
+                    MessageBox.Show("La contraseña es incorrecta. Intentelo nuevamente");
+                }
+            }
+            catch (ElementoNoEncontrado) {
+                MessageBox.Show("El usuario no existe. Intentelo nuevamente");
+            }
+            
+    
         }
     }
 }

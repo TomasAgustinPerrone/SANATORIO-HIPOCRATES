@@ -1,5 +1,5 @@
 ﻿
-namespace SANATORIO_HIPOCRATES
+namespace SANATORIO_HIPOCRATES.Formularios
 {
     partial class Recepcion
     {
@@ -119,6 +119,7 @@ namespace SANATORIO_HIPOCRATES
             this.button2.TabIndex = 6;
             this.button2.Text = "Cerrar sesion";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel3
             // 

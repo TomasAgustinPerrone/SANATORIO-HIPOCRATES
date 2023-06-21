@@ -9,8 +9,8 @@ using SANATORIO_HIPOCRATES.Config;
 namespace SANATORIO_HIPOCRATES.Migrations
 {
     [DbContext(typeof(Conexion))]
-    [Migration("20230619050206_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230621012033_initial2")]
+    partial class initial2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -53,9 +53,6 @@ namespace SANATORIO_HIPOCRATES.Migrations
                     b.Property<long>("IdMedico")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
-
-                    b.Property<string>("Especialidad")
-                        .HasColumnType("longtext");
 
                     b.Property<long>("IdEmpleado")
                         .HasColumnType("bigint");

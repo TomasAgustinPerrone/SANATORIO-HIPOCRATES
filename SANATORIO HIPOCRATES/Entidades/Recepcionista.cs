@@ -31,15 +31,15 @@ namespace SANATORIO_HIPOCRATES.Entidades
         }
 
         public void CrearEmpleado(long dni, string nombre, string apellido, char sexo, string telefono,
-                            string email, string domicilio, DateTime fechaNacimiento, string nacionalidad, string username, string password, DateTime fechaAlta, double salario)
+                            string email, string domicilio, DateTime fechaNacimiento, string nacionalidad, string username, string password, DateTime fechaAlta, double salario, string sector)
         {
             PersonaService personaService = new PersonaService();
             Persona personaNueva = personaService.CrearPersona(dni, nombre, apellido, sexo, telefono,
                                     email, domicilio, fechaNacimiento, nacionalidad);
 
             EmpleadoService empleadoService = new EmpleadoService();
-            Empleado empleadoNuevo = empleadoService.CrearEmpleado(username, password, fechaAlta, salario, personaNueva);
-            MessageBox.Show($"El paciente {nombre} {apellido}, DNI: {dni} y username: {username} solicita un turno.");
+            Empleado empleadoNuevo = empleadoService.CrearEmpleado(username, password, fechaAlta, salario, sector, personaNueva);
+            MessageBox.Show($"El empleado {nombre} {apellido}, DNI: {dni} y username: {username} ha sido creado.");
             
         }
 

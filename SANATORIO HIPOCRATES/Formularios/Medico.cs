@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using System.Drawing;
 
-namespace SANATORIO_HIPOCRATES
+namespace SANATORIO_HIPOCRATES.Formularios
 {
     public partial class Medico : Form
     {

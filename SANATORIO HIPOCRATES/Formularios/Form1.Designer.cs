@@ -1,5 +1,5 @@
 ﻿
-namespace SANATORIO_HIPOCRATES
+namespace SANATORIO_HIPOCRATES.Formularios
 {
     partial class Form1
     {
@@ -31,6 +31,7 @@ namespace SANATORIO_HIPOCRATES
             this.txtUser = new System.Windows.Forms.TextBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.linkContra = new System.Windows.Forms.LinkLabel();
+            this.registrarUsuario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,6 +78,7 @@ namespace SANATORIO_HIPOCRATES
             this.botonIngresar.TabIndex = 3;
             this.botonIngresar.Text = "Ingresar";
             this.botonIngresar.UseVisualStyleBackColor = false;
+            this.botonIngresar.Click += new System.EventHandler(this.botonIngresar_Click);
             // 
             // txtLogin
             // 
@@ -136,6 +138,25 @@ namespace SANATORIO_HIPOCRATES
             this.linkContra.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.linkContra.VisitedLinkColor = System.Drawing.Color.Teal;
             // 
+            // registrarUsuario
+            // 
+            this.registrarUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.registrarUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.registrarUsuario.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.registrarUsuario.FlatAppearance.BorderSize = 0;
+            this.registrarUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.registrarUsuario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.registrarUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registrarUsuario.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point);
+            this.registrarUsuario.ForeColor = System.Drawing.Color.Gold;
+            this.registrarUsuario.Location = new System.Drawing.Point(432, 336);
+            this.registrarUsuario.Name = "registrarUsuario";
+            this.registrarUsuario.Size = new System.Drawing.Size(209, 30);
+            this.registrarUsuario.TabIndex = 8;
+            this.registrarUsuario.Text = "Registrar nuevo empleado";
+            this.registrarUsuario.UseVisualStyleBackColor = false;
+            this.registrarUsuario.Click += new System.EventHandler(this.registrarUsuario_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -143,6 +164,7 @@ namespace SANATORIO_HIPOCRATES
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 400);
+            this.Controls.Add(this.registrarUsuario);
             this.Controls.Add(this.linkContra);
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.txtUser);
@@ -172,6 +194,7 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.TextBox txtUser;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.LinkLabel linkContra;
+        private System.Windows.Forms.Button registrarUsuario;
     }
 }
 

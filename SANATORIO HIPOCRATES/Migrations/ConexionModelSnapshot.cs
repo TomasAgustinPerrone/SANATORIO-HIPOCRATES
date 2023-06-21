@@ -52,9 +52,6 @@ namespace SANATORIO_HIPOCRATES.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("bigint");
 
-                    b.Property<string>("Especialidad")
-                        .HasColumnType("longtext");
-
                     b.Property<long>("IdEmpleado")
                         .HasColumnType("bigint");
 

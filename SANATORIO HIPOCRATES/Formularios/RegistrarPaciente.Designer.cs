@@ -1,5 +1,5 @@
 ﻿
-namespace SANATORIO_HIPOCRATES
+namespace SANATORIO_HIPOCRATES.Formularios
 {
     partial class RegistrarPaciente
     { 
@@ -353,6 +353,7 @@ namespace SANATORIO_HIPOCRATES
             this.inputApellido.PlaceholderText = "Ingrese APELLIDO";
             this.inputApellido.Size = new System.Drawing.Size(292, 27);
             this.inputApellido.TabIndex = 66;
+            this.inputApellido.TextChanged += new System.EventHandler(this.inputApellido_TextChanged_1);
             // 
             // inputSexo
             // 

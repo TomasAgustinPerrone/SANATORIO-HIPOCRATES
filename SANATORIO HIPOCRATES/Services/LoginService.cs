@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace SANATORIO_HIPOCRATES.Services
 {
@@ -21,7 +22,7 @@ namespace SANATORIO_HIPOCRATES.Services
 
                 if (usuarioExistente != null)
                 {
-                    if(EncriptacionPassword.VerificarPassword(password, usuarioExistente.Password))
+                    if (EncriptacionPassword.VerificarPassword(password, usuarioExistente.Password))
                     {
                         return true;
                     } 

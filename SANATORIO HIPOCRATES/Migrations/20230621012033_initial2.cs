@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace SANATORIO_HIPOCRATES.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class initial2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -95,9 +95,7 @@ namespace SANATORIO_HIPOCRATES.Migrations
                 {
                     IdMedico = table.Column<long>(type: "bigint", nullable: false)
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
-                    IdEmpleado = table.Column<long>(type: "bigint", nullable: false),
-                    Especialidad = table.Column<string>(type: "longtext", nullable: true)
-                        .Annotation("MySql:CharSet", "utf8mb4")
+                    IdEmpleado = table.Column<long>(type: "bigint", nullable: false)
                 },
                 constraints: table =>
                 {

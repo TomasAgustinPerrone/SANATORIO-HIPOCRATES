@@ -1,5 +1,5 @@
 ﻿
-namespace SANATORIO_HIPOCRATES
+namespace SANATORIO_HIPOCRATES.Formularios
 {
     partial class RegistrarEmpleado
     {
@@ -50,13 +50,13 @@ namespace SANATORIO_HIPOCRATES
             this.inputNacionalidad = new System.Windows.Forms.TextBox();
             this.label10FECHANAC = new System.Windows.Forms.Label();
             this.label9NACIONALIDAD = new System.Windows.Forms.Label();
-            this.textFECHAINICIO = new System.Windows.Forms.TextBox();
-            this.TEXSALARIO = new System.Windows.Forms.TextBox();
+            this.inputFechaAlta = new System.Windows.Forms.TextBox();
+            this.inputSalario = new System.Windows.Forms.TextBox();
             this.label12INICIO = new System.Windows.Forms.Label();
             this.label11SALARIO = new System.Windows.Forms.Label();
-            this.textUSUARIO = new System.Windows.Forms.TextBox();
+            this.inputUsername = new System.Windows.Forms.TextBox();
             this.label13usuario = new System.Windows.Forms.Label();
-            this.textBoxCONTRASEÑA = new System.Windows.Forms.TextBox();
+            this.inputPassword = new System.Windows.Forms.TextBox();
             this.label14CONTRASEÑA = new System.Windows.Forms.Label();
             this.buttonGUARDAR = new System.Windows.Forms.Button();
             this.button2BORRAR = new System.Windows.Forms.Button();
@@ -301,29 +301,29 @@ namespace SANATORIO_HIPOCRATES
             this.label9NACIONALIDAD.TabIndex = 85;
             this.label9NACIONALIDAD.Text = "Nacionalidad";
             // 
-            // textFECHAINICIO
+            // inputFechaAlta
             // 
-            this.textFECHAINICIO.BackColor = System.Drawing.Color.White;
-            this.textFECHAINICIO.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textFECHAINICIO.ForeColor = System.Drawing.Color.Black;
-            this.textFECHAINICIO.Location = new System.Drawing.Point(572, 275);
-            this.textFECHAINICIO.Name = "textFECHAINICIO";
-            this.textFECHAINICIO.PlaceholderText = "dd-mm-aaaa";
-            this.textFECHAINICIO.Size = new System.Drawing.Size(292, 27);
-            this.textFECHAINICIO.TabIndex = 92;
-            this.textFECHAINICIO.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.inputFechaAlta.BackColor = System.Drawing.Color.White;
+            this.inputFechaAlta.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputFechaAlta.ForeColor = System.Drawing.Color.Black;
+            this.inputFechaAlta.Location = new System.Drawing.Point(572, 275);
+            this.inputFechaAlta.Name = "inputFechaAlta";
+            this.inputFechaAlta.PlaceholderText = "dd-mm-aaaa";
+            this.inputFechaAlta.Size = new System.Drawing.Size(292, 27);
+            this.inputFechaAlta.TabIndex = 92;
+            this.inputFechaAlta.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
-            // TEXSALARIO
+            // inputSalario
             // 
-            this.TEXSALARIO.BackColor = System.Drawing.Color.White;
-            this.TEXSALARIO.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.TEXSALARIO.ForeColor = System.Drawing.Color.Black;
-            this.TEXSALARIO.Location = new System.Drawing.Point(572, 212);
-            this.TEXSALARIO.Name = "TEXSALARIO";
-            this.TEXSALARIO.PlaceholderText = "Ingrese Salario Bruto";
-            this.TEXSALARIO.Size = new System.Drawing.Size(292, 27);
-            this.TEXSALARIO.TabIndex = 91;
-            this.TEXSALARIO.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.inputSalario.BackColor = System.Drawing.Color.White;
+            this.inputSalario.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputSalario.ForeColor = System.Drawing.Color.Black;
+            this.inputSalario.Location = new System.Drawing.Point(572, 212);
+            this.inputSalario.Name = "inputSalario";
+            this.inputSalario.PlaceholderText = "Ingrese Salario Bruto";
+            this.inputSalario.Size = new System.Drawing.Size(292, 27);
+            this.inputSalario.TabIndex = 91;
+            this.inputSalario.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label12INICIO
             // 
@@ -351,16 +351,16 @@ namespace SANATORIO_HIPOCRATES
             this.label11SALARIO.Text = "Salario Bruto\r\n";
             this.label11SALARIO.Click += new System.EventHandler(this.label2_Click);
             // 
-            // textUSUARIO
+            // inputUsername
             // 
-            this.textUSUARIO.BackColor = System.Drawing.Color.White;
-            this.textUSUARIO.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textUSUARIO.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textUSUARIO.Location = new System.Drawing.Point(572, 350);
-            this.textUSUARIO.Name = "textUSUARIO";
-            this.textUSUARIO.PlaceholderText = "Ingrese usuario";
-            this.textUSUARIO.Size = new System.Drawing.Size(292, 27);
-            this.textUSUARIO.TabIndex = 94;
+            this.inputUsername.BackColor = System.Drawing.Color.White;
+            this.inputUsername.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputUsername.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.inputUsername.Location = new System.Drawing.Point(572, 350);
+            this.inputUsername.Name = "inputUsername";
+            this.inputUsername.PlaceholderText = "Ingrese usuario";
+            this.inputUsername.Size = new System.Drawing.Size(292, 27);
+            this.inputUsername.TabIndex = 94;
             // 
             // label13usuario
             // 
@@ -374,16 +374,16 @@ namespace SANATORIO_HIPOCRATES
             this.label13usuario.TabIndex = 93;
             this.label13usuario.Text = "Usuario";
             // 
-            // textBoxCONTRASEÑA
+            // inputPassword
             // 
-            this.textBoxCONTRASEÑA.BackColor = System.Drawing.Color.White;
-            this.textBoxCONTRASEÑA.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBoxCONTRASEÑA.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.textBoxCONTRASEÑA.Location = new System.Drawing.Point(572, 420);
-            this.textBoxCONTRASEÑA.Name = "textBoxCONTRASEÑA";
-            this.textBoxCONTRASEÑA.PlaceholderText = "Ingrese contraseña";
-            this.textBoxCONTRASEÑA.Size = new System.Drawing.Size(292, 27);
-            this.textBoxCONTRASEÑA.TabIndex = 96;
+            this.inputPassword.BackColor = System.Drawing.Color.White;
+            this.inputPassword.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.inputPassword.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.inputPassword.Location = new System.Drawing.Point(572, 420);
+            this.inputPassword.Name = "inputPassword";
+            this.inputPassword.PlaceholderText = "Ingrese contraseña";
+            this.inputPassword.Size = new System.Drawing.Size(292, 27);
+            this.inputPassword.TabIndex = 96;
             // 
             // label14CONTRASEÑA
             // 
@@ -499,12 +499,12 @@ namespace SANATORIO_HIPOCRATES
             this.Controls.Add(this.btnCerrar);
             this.Controls.Add(this.button2BORRAR);
             this.Controls.Add(this.buttonGUARDAR);
-            this.Controls.Add(this.textBoxCONTRASEÑA);
+            this.Controls.Add(this.inputPassword);
             this.Controls.Add(this.label14CONTRASEÑA);
-            this.Controls.Add(this.textUSUARIO);
+            this.Controls.Add(this.inputUsername);
             this.Controls.Add(this.label13usuario);
-            this.Controls.Add(this.textFECHAINICIO);
-            this.Controls.Add(this.TEXSALARIO);
+            this.Controls.Add(this.inputFechaAlta);
+            this.Controls.Add(this.inputSalario);
             this.Controls.Add(this.label12INICIO);
             this.Controls.Add(this.label11SALARIO);
             this.Controls.Add(this.inputFechaNac);
@@ -560,13 +560,13 @@ namespace SANATORIO_HIPOCRATES
         private System.Windows.Forms.TextBox inputNacionalidad;
         private System.Windows.Forms.Label label10FECHANAC;
         private System.Windows.Forms.Label label9NACIONALIDAD;
-        private System.Windows.Forms.TextBox textFECHAINICIO;
-        private System.Windows.Forms.TextBox TEXSALARIO;
+        private System.Windows.Forms.TextBox inputFechaAlta;
+        private System.Windows.Forms.TextBox inputSalario;
         private System.Windows.Forms.Label label12INICIO;
         private System.Windows.Forms.Label label11SALARIO;
-        private System.Windows.Forms.TextBox textUSUARIO;
+        private System.Windows.Forms.TextBox inputUsername;
         private System.Windows.Forms.Label label13usuario;
-        private System.Windows.Forms.TextBox textBoxCONTRASEÑA;
+        private System.Windows.Forms.TextBox inputPassword;
         private System.Windows.Forms.Label label14CONTRASEÑA;
         private System.Windows.Forms.Button buttonGUARDAR;
         private System.Windows.Forms.Button button2BORRAR;

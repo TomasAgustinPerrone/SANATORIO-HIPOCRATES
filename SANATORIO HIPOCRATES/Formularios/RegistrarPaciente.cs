@@ -5,7 +5,7 @@ using System.Globalization;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
-namespace SANATORIO_HIPOCRATES
+namespace SANATORIO_HIPOCRATES.Formularios
 {
     public partial class RegistrarPaciente : Form
     {
@@ -272,6 +272,16 @@ namespace SANATORIO_HIPOCRATES
         }
 
         private void inputDNI_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputFechaNac_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void inputApellido_TextChanged_1(object sender, EventArgs e)
         {
 
         }
