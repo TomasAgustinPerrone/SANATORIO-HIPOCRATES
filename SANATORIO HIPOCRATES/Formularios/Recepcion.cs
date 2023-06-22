@@ -104,10 +104,8 @@ namespace SANATORIO_HIPOCRATES.Formularios
             PacienteService pacienteService = new PacienteService();
             Paciente paciente = pacienteService.BuscarPacienteByIdDePersona(persona.IdPersona);
 
-            // Crear un objeto anónimo que contenga la información de ambas entidades
-            var result = new
+            var personaPaciente = new
             {
-                // Propiedades de Persona
                 IdPersona = persona.IdPersona,
                 Nombre = persona.Nombre,
                 Apellido = persona.Apellido,
@@ -118,17 +116,15 @@ namespace SANATORIO_HIPOCRATES.Formularios
                 Email = persona.Email,
                 Nacionalidad = persona.Nacionalidad,
                 FechaNac = persona.FechaNacimiento,
-
                 IdPaciente = paciente.IdPaciente,
                 ObraSocial = paciente.ObraSocial,
                 NroCarnet = paciente.NumeroCarnet
             };
 
-            // Agregar el objeto anónimo a una lista
-            var resultList = new List<object> { result };
+            var listaPersonaPaciente = new List<object> { personaPaciente };
 
             dataGridPacientes.AutoGenerateColumns = true;
-            dataGridPacientes.DataSource = resultList;
+            dataGridPacientes.DataSource = listaPersonaPaciente;
         }
 
 
@@ -141,16 +137,13 @@ namespace SANATORIO_HIPOCRATES.Formularios
         {
 
             PacienteService pacienteService = new PacienteService();
-            Paciente paciente = pacienteService.BuscarPacienteEnDB(long.Parse(inputCarnet.Text) ); 
+            Paciente paciente = pacienteService.BuscarPacienteByNroCarnet(long.Parse(inputCarnet.Text) ); 
 
             PersonaService personaService = new PersonaService();
             Persona persona = personaService.BuscarPersonaById(paciente.IdPersona);
 
-
-            // Crear un objeto anónimo que contenga la información de ambas entidades
             var result = new
             {
-                // Propiedades de Persona
                 IdPersona = persona.IdPersona,
                 Nombre = persona.Nombre,
                 Apellido = persona.Apellido,
@@ -161,13 +154,11 @@ namespace SANATORIO_HIPOCRATES.Formularios
                 Email = persona.Email,
                 Nacionalidad = persona.Nacionalidad,
                 FechaNac = persona.FechaNacimiento,
-
                 IdPaciente = paciente.IdPaciente,
                 ObraSocial = paciente.ObraSocial,
                 NroCarnet = paciente.NumeroCarnet
             };
 
-            // Agregar el objeto anónimo a una lista
             var resultList = new List<object> { result };
 
             dataGridPacientes.AutoGenerateColumns = true;
@@ -286,6 +277,13 @@ namespace SANATORIO_HIPOCRATES.Formularios
         {
             Form1 form1 = new Form1();
             form1.Show();
+            this.Close();
+        }
+
+        private void interfazMedico_Click(object sender, EventArgs e)
+        {
+            Medico medico = new Medico();
+            medico.Show();
             this.Close();
         }
     }

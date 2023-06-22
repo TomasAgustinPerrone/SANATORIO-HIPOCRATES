@@ -10,6 +10,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 
 namespace SANATORIO_HIPOCRATES.Services
 {
@@ -86,6 +87,49 @@ namespace SANATORIO_HIPOCRATES.Services
                     context.SaveChanges();
 
                     return nuevaPersona;
+                }
+
+            }
+        }
+
+
+        public void EliminarPersona(long dni)
+        {
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
+            {
+                try
+                {
+                    MessageBox.Show($"Verificando la existencia de DNI: {dni}");
+                    var personaExistente = BuscarPersonaEnDB(dni);
+                    MessageBox.Show($"La persona con DNI {dni} ya está registrada en la base");
+
+                    EmpleadoService empleadoService = new EmpleadoService();
+                    PacienteService pacienteService = new PacienteService();
+
+                    Empleado empleadoExistente = empleadoService.BuscarEmpleadoByIdDePersona(personaExistente.IdPersona);
+
+                    if(empleadoExistente != null)
+                    {
+                        context.Empleados.Remove(empleadoExistente);
+                        context.SaveChanges();
+                    }
+
+                    Paciente pacienteExistente = pacienteService.BuscarPacienteByIdDePersona(personaExistente.IdPersona);
+
+                    if (pacienteExistente != null)
+                    {
+                        context.Pacientes.Remove(pacienteExistente);
+                        context.SaveChanges();
+                    }
+
+                    context.Personas.Remove(personaExistente);
+                    context.SaveChanges();
+                    MessageBox.Show($"La persona con DNI {dni} se ha eliminado");
+
+                }
+                catch (ElementoNoEncontrado e)
+                {
+                    MessageBox.Show(e.Message);
                 }
 
             }

@@ -51,15 +51,12 @@ namespace SANATORIO_HIPOCRATES.Entidades
                 $"\nSu turno es el nro {turnoNuevo.IdTurno}");
         }
 
-        public void EliminarTurno()
+        public void EliminarTurno(long idPaciente)
         {
-
+            TurnoService turnoService = new TurnoService();
+            turnoService.EliminarTurno(idPaciente);
         }
 
-        public void ModificarTurno()
-        {
-
-        }
 
         public Recepcionista()
         {

@@ -37,7 +37,25 @@ namespace SANATORIO_HIPOCRATES.Services
             }
         }
 
-        public Paciente BuscarPacienteEnDB(long nroCarnet)
+        public Paciente BuscarPacienteByIdDePaciente(long idPaciente)
+        {
+
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
+            {
+                var pacienteExistente = context.Pacientes.FirstOrDefault(p => p.IdPaciente == idPaciente);
+
+                if (pacienteExistente != null)
+                {
+                    return pacienteExistente;
+                }
+                else
+                {
+                    throw new ElementoNoEncontrado("No existe un paciente registrado con el id: " + idPaciente);
+                }
+            }
+        }
+
+        public Paciente BuscarPacienteByNroCarnet(long nroCarnet)
         {
             using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
             {
@@ -64,7 +82,7 @@ namespace SANATORIO_HIPOCRATES.Services
                 try
                 {
                     MessageBox.Show($"Verificando la existencia de Nro de carnet: {nroCarnet}");
-                    var pacienteExistente = BuscarPacienteEnDB(nroCarnet);
+                    var pacienteExistente = BuscarPacienteByNroCarnet(nroCarnet);
                     MessageBox.Show($"El paciente con nro carnet {nroCarnet} ya está registrado en la base");
                     return pacienteExistente;
                 }

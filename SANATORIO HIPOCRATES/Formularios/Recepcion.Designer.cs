@@ -35,8 +35,8 @@ namespace SANATORIO_HIPOCRATES.Formularios
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.interfazMedico = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
@@ -75,8 +75,8 @@ namespace SANATORIO_HIPOCRATES.Formularios
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.panel1.Controls.Add(this.interfazMedico);
             this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.monthCalendar1);
@@ -85,23 +85,33 @@ namespace SANATORIO_HIPOCRATES.Formularios
             this.panel1.Size = new System.Drawing.Size(253, 617);
             this.panel1.TabIndex = 4;
             // 
+            // interfazMedico
+            // 
+            this.interfazMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.interfazMedico.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.interfazMedico.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.interfazMedico.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(123)))), ((int)(((byte)(157)))));
+            this.interfazMedico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Teal;
+            this.interfazMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.interfazMedico.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.interfazMedico.ForeColor = System.Drawing.SystemColors.Window;
+            this.interfazMedico.Location = new System.Drawing.Point(52, 500);
+            this.interfazMedico.Name = "interfazMedico";
+            this.interfazMedico.Size = new System.Drawing.Size(157, 30);
+            this.interfazMedico.TabIndex = 22;
+            this.interfazMedico.Text = "Interfaz médico";
+            this.interfazMedico.UseVisualStyleBackColor = false;
+            this.interfazMedico.Click += new System.EventHandler(this.interfazMedico_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::SANATORIO_HIPOCRATES.Properties.Resources._1;
-            this.pictureBox1.Location = new System.Drawing.Point(35, 23);
+            this.pictureBox1.Location = new System.Drawing.Point(24, 39);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(184, 171);
+            this.pictureBox1.Size = new System.Drawing.Size(205, 196);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(4, 390);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(246, 172);
-            this.panel5.TabIndex = 22;
             // 
             // button2
             // 
@@ -131,7 +141,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
             // monthCalendar1
             // 
             this.monthCalendar1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.monthCalendar1.Location = new System.Drawing.Point(3, 219);
+            this.monthCalendar1.Location = new System.Drawing.Point(5, 276);
             this.monthCalendar1.Name = "monthCalendar1";
             this.monthCalendar1.TabIndex = 21;
             this.monthCalendar1.TitleBackColor = System.Drawing.SystemColors.ControlDark;
@@ -487,7 +497,6 @@ namespace SANATORIO_HIPOCRATES.Formularios
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox inputCarnet;
         private System.Windows.Forms.Button buscarPacientePorCarnet;
@@ -498,5 +507,6 @@ namespace SANATORIO_HIPOCRATES.Formularios
         private System.Windows.Forms.DataGridView dataGridPacientes;
         private System.Windows.Forms.Button generarTurno;
         private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.Button interfazMedico;
     }
 }

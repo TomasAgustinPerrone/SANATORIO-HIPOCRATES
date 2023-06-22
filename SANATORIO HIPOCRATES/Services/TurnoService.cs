@@ -65,6 +65,27 @@ namespace SANATORIO_HIPOCRATES.Services
             }
         }
 
+        public void EliminarTurno(long idPaciente)
+        {
+
+            using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
+            {
+
+                try
+                {
+                    var turnoExistente = BuscarTurnoEnDB(idPaciente);
+                    context.Turnos.Remove(turnoExistente);
+                    context.SaveChanges();
+                    MessageBox.Show("Se ha eliminado el turno de la lista de espera");
+                }
+                catch (ElementoNoEncontrado e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+
+            }
+        }
+
         public List<Turno> mostrarTodosLosTurnos()
         {
             using (var context = new Conexion(conexionService.ConexionMYSQL().Options))
