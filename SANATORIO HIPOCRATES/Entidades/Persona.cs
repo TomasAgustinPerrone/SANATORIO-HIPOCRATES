@@ -24,11 +24,6 @@ namespace SANATORIO_HIPOCRATES.Entidades
         private string nacionalidad;
 
         
-        public void CalcularEdad()
-        {
-
-        }
-
  
         public Persona()
         {

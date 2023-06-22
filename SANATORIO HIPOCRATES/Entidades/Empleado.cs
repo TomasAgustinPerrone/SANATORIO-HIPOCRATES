@@ -17,10 +17,6 @@ namespace SANATORIO_HIPOCRATES.Entidades
         private double salario;
         private Persona persona;
 
-        public void CalcularAntiguedad()
-        {
-
-        }
 
         public Empleado()
         {

@@ -71,6 +71,7 @@ namespace SANATORIO_HIPOCRATES.Formularios
         {
             if (string.IsNullOrWhiteSpace(diagnostico.Text))
             {
+                MessageBox.Show("Debe ingresar un diagnostico.");
                 return;
             }
 

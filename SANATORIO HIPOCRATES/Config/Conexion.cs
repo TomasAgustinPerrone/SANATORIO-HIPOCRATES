@@ -50,9 +50,7 @@ namespace SANATORIO_HIPOCRATES.Config
                 .WithOne()
                 .HasForeignKey<MedicoPersonal>(b => b.IdEmpleado);
 
-
         }
-
 
     }
 }

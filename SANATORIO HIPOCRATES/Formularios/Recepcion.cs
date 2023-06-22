@@ -214,20 +214,6 @@ namespace SANATORIO_HIPOCRATES.Formularios
             dataGridView1.AutoGenerateColumns = true;
             dataGridView1.DataSource = turnos;
 
-            //EXPEDIR DIAGNOSTICO
-
-            Document doc = new Document();
-            PdfWriter.GetInstance(doc, new FileStream($"{turnos[0].IdPaciente}_turno.pdf", FileMode.Create));
-            doc.Open();
-            doc.Add(new Paragraph("Sanatorio Hipocrates \n" +
-                "Avenida Independencia 1127, CABA" +
-                "\n___________________________________________________________________"+
-                "\n\nFecha:" + DateTime.Now +
-                "\n\n" +
-                "ID del paciente: " + turnos[0].IdPaciente + "Nro de turno: " + turnos[0].IdTurno + 
-                "QUE DICE LA BAAAAAAAAAANDA"
-                ));
-            doc.Close();
         }
         //BOTON REFRESCAR
         private void refrescar_Click(object sender, EventArgs e)
