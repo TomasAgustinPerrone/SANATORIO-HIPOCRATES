@@ -26,13 +26,13 @@ namespace SANATORIO_HIPOCRATES.Config
         public DbSet<Recepcionista> Recepcionistas { get; set; }
         public DbSet<Turno> Turnos { get; set; }
 
-
+        // Configuración de la relación uno a uno entre Paciente y Persona utilizando la clave foránea IdPersona en Paciente, Empleado, Recepcionista,MedicoPersonal
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Paciente>()
                 .HasOne(p => p.Persona)
                 .WithOne()
-                .HasForeignKey<Paciente>(b => b.IdPersona);
+                .HasForeignKey<Paciente>(b => b.IdPersona); 
 
             modelBuilder.Entity<Empleado>()
                 .HasOne(e => e.Persona)
